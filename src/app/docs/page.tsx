@@ -1,7 +1,7 @@
-export default function Page(){
+import React from 'react'
 
-    return(
-        
-        <div>Hello</div>
-    )
+export default function Docs() {
+  return ( 
+    <div>Docs</div>
+  )
 }
