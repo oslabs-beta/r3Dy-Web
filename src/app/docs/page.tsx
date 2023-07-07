@@ -15,49 +15,49 @@ export default function Docs() {
   //    Example of Props it Accepts
   //    Example Code of Implementation
 
-  const buttonName = '3D Button'
-  const loaderName = '3D Loader'
-  const textFieldName = '3D Text Field'
-  const switchName = '3D Switch'
+  const buttonName: string = '3D Button'
+  const loaderName: string = '3D Loader'
+  const textFieldName: string = '3D Text Field'
+  const switchName: string = '3D Switch'
 
-  const buttonImportExample =`import { Button } from 'r3dy';`
-  const loaderImportExample =`import { Loader } from 'r3dy';`
-  const textFieldImportExample =`import { TextField } from 'r3dy';`
-  const switchImportExample =`import { Switch } from 'r3dy';`
+  const buttonImportExample: string =`import { Button } from 'r3dy';`
+  const loaderImportExample: string =`import { Loader } from 'r3dy';`
+  const textFieldImportExample: string =`import { TextField } from 'r3dy';`
+  const switchImportExample: string =`import { Switch } from 'r3dy';`
   
-  const buttonPropsExample = `  scale: number, color: string, hoverColor: string, text: string, fontSize: number, fontColor: string, handleClick: function`;
-  const loaderPropsExample = `  color: string, scale: number, rotationAxis: x/y/z, rotationDirection: positive/negative, 
+  const buttonPropsExample: string = `  scale: number, color: string, hoverColor: string, text: string, fontSize: number, fontColor: string, handleClick: function`;
+  const loaderPropsExample: string = `  color: string, scale: number, rotationAxis: x/y/z, rotationDirection: positive/negative, 
   fancyAnimation: true/false, speed: number, material: (Any ThreeJS material), wireframe: true/false`;
-  const switchPropsExample = `  color: string, scale: number, callback: function`;
-  const textFieldPropsExample = `  color: string, width: number, height: number, backgroundColor: string, text: string, font: string, onChange: function`;
+  const switchPropsExample: string = `  color: string, scale: number, callback: function`;
+  const textFieldPropsExample: string = `  color: string, width: number, height: number, backgroundColor: string, text: string, font: string, onChange: function`;
 
-  const buttonExampleCode = `export default function MyComponent(){ 
+  const buttonExampleCode: string = `export default function MyComponent(){ 
     return (
       {data ? data : <Button />}
       )
     };`;
-  const loaderExampleCode = `export default function MyComponent(){ 
+  const loaderExampleCode: string = `export default function MyComponent(){ 
     return (
       {data ? data : <Loader />}
       )
     };`;
-    const switchExampleCode = `export default function MyComponent(){ 
+    const switchExampleCode: string = `export default function MyComponent(){ 
       return (
         {data ? data : <Switch />}
         )
       };`;
-    const textFieldExampleCode = `export default function MyComponent(){ 
+    const textFieldExampleCode: string = `export default function MyComponent(){ 
       return (
         <TextField />
         )
       };`;
 
-  const sliderName = '3D Slider'
+  const sliderName: string = '3D Slider'
   
-  const sliderImportExample = `import {Slider} from 'r3ds'`
-  const sliderPropsExample = 'onChange: function, value: number, max: number, steps:number'
+  const sliderImportExample: string = `import {Slider} from 'r3ds'`
+  const sliderPropsExample: string = 'onChange: function, value: number, max: number, steps:number'
 
-  const sliderExampleCode = `export default function myComponent(){
+  const sliderExampleCode: string = `export default function myComponent(){
   return(
     <Slider />
   )}`

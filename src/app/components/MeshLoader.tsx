@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { useGLTF, OrthographicCamera, MeshDistortMaterial, useMatcapTexture } from "@react-three/drei";
 import { useFrame } from '@react-three/fiber'
-import { MeshBasicMaterial, MeshDepthMaterial, MeshLambertMaterial, MeshStandardMaterial, MeshToonMaterial, MeshMatcapMaterial, MaterialParameters, MeshMatcapMaterialParameters, Material } from "three";
+import { MeshBasicMaterial, MeshDepthMaterial, MeshLambertMaterial, MeshStandardMaterial, MeshToonMaterial, MeshMatcapMaterial, MaterialParameters, MeshMatcapMaterialParameters, Material, Group } from "three";
 
 type LoaderProps = {
   color?: string;
@@ -17,8 +17,10 @@ type LoaderProps = {
 }
 
 export default function MeshLoader(props: LoaderProps) {
-  const model = useRef()
-const scale: number = props.scale/50 || 0.025
+  
+  const model = React.useRef<Group>(null);
+
+const scale: number = props.scale ? props.scale/50 : 0.025
 const material = props.material || MeshMatcapMaterial
 const speed: number = props.speed || 5
 const rotationAxis: string = props.rotationAxis || 'z'
@@ -44,23 +46,28 @@ const materialAll = new material({color: color, wireframe: wireframe, matcap: ma
 
 // animation logic
 useFrame((state, delta) => {
+  const rotationSpeed: number = fancyAnimation ? Math.abs(Math.sin(state.clock.elapsedTime) / Math.PI) - (0.0004 * state.clock.elapsedTime) : 1;
 
-  const rotationSpeed: number = fancyAnimation ? Math.abs(Math.sin(state.clock.elapsedTime)/Math.PI) - (0.0004 * state.clock.elapsedTime) : 1
+  if (model.current) {
+    if (rotationAxis === "x" || rotationAxis === "y" || rotationAxis === "z") {
+      let rotationAxisValue: "x" | "y" | "z" = rotationAxis;
+      
+      if (rotationDirection === 'negative' && fancyAnimation) {
+        model.current.rotation[rotationAxisValue] += delta * rotationSpeed * -speed;
+      } else if (rotationDirection === 'positive' && fancyAnimation) {
+        model.current.rotation[rotationAxisValue] += delta * rotationSpeed * speed;
+      }
 
-  if (rotationDirection === 'negative' && fancyAnimation) {
-    model.current.rotation[rotationAxis] += delta * rotationSpeed * -speed
-   } else if (rotationDirection === 'positive' && fancyAnimation){
-    model.current.rotation[rotationAxis] += delta * rotationSpeed * speed
-   }
-
-  if (rotationDirection === 'negative' && !fancyAnimation) {
-   model.current.rotation[rotationAxis] += (delta * rotationSpeed * -speed)/Math.PI
-  } else if (rotationDirection === 'positive' && !fancyAnimation){
-   model.current.rotation[rotationAxis] += (delta * rotationSpeed * speed)/Math.PI
+      if (rotationDirection === 'negative' && !fancyAnimation) {
+        model.current.rotation[rotationAxisValue] += (delta * rotationSpeed * -speed) / Math.PI;
+      } else if (rotationDirection === 'positive' && !fancyAnimation) {
+        model.current.rotation[rotationAxisValue] += (delta * rotationSpeed * speed) / Math.PI;
+      }
+    }
   }
-})
+});
 
-  const { nodes } = useGLTF("/meshLoader.gltf");
+  const { nodes } = useGLTF("/meshLoader.gltf") as any;
   return (
     <group {...props} dispose={null}>
       <group scale={scale} rotation={[Math.PI/2, 0, 0]} position={[0,0,0]} ref={model}>

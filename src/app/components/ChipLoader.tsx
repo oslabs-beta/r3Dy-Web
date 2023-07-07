@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useGLTF, OrthographicCamera, MeshDistortMaterial, useMatcapTexture } from "@react-three/drei";
 import { useFrame, useLoader  } from '@react-three/fiber'
-import { MeshBasicMaterial, MeshDepthMaterial, MeshLambertMaterial, MeshStandardMaterial, MeshToonMaterial, MeshMatcapMaterial, TextureLoader } from "three";
+import { MeshBasicMaterial, MeshDepthMaterial, MeshLambertMaterial, MeshStandardMaterial, MeshToonMaterial, MeshMatcapMaterial, TextureLoader, Object3D, Euler, Group } from "three";
 
 
 type LoaderProps = {
@@ -19,11 +19,12 @@ type LoaderProps = {
 
 export default function ChipLoader(props: LoaderProps) {
 
- const chips = useRef();
+  const chips = React.useRef<Group>(null);
+
 
  // props.theme indicates a default light or dark mode --- color
 
-const scale: number = props.scale/100 || 0.01
+const scale: number = props.scale ? props.scale/100 : 0.01
 const material = props.material || MeshMatcapMaterial
 const speed: number = props.speed || 5
 const rotationAxis: string = props.rotationAxis || 'z'
@@ -46,30 +47,36 @@ const [matcap, url] = useMatcapTexture(34, 1024);
 
 const materialAll = new material({color: color, wireframe: wireframe, matcap:matcap});
 
-
 useFrame((state, delta) => {
+  const rotationSpeed: number = fancyAnimation ? Math.abs(Math.sin(state.clock.elapsedTime) / Math.PI) - (0.0004 * state.clock.elapsedTime) : 1;
 
-  const rotationSpeed: number = fancyAnimation ? Math.abs(Math.sin(state.clock.elapsedTime)/Math.PI) - (0.0004 * state.clock.elapsedTime) : 1
+  if (chips.current) {
+    if (rotationAxis === "x" || rotationAxis === "y" || rotationAxis === "z") {
+      let rotationAxisValue: "x" | "y" | "z" = rotationAxis;
+      
+      if (rotationDirection === 'negative' && fancyAnimation) {
+        chips.current.rotation[rotationAxisValue] += delta * rotationSpeed * -speed;
+      } else if (rotationDirection === 'positive' && fancyAnimation) {
+        chips.current.rotation[rotationAxisValue] += delta * rotationSpeed * speed;
+      }
 
-  if (rotationDirection === 'negative' && fancyAnimation) {
-    chips.current.rotation[rotationAxis] += delta * rotationSpeed * -speed
-   } else if (rotationDirection === 'positive' && fancyAnimation){
-    chips.current.rotation[rotationAxis] += delta * rotationSpeed * speed
-   }
-
-  if (rotationDirection === 'negative' && !fancyAnimation) {
-   chips.current.rotation[rotationAxis] += (delta * rotationSpeed * -speed)/Math.PI
-  } else if (rotationDirection === 'positive' && !fancyAnimation){
-   chips.current.rotation[rotationAxis] += (delta * rotationSpeed * speed)/Math.PI
+      if (rotationDirection === 'negative' && !fancyAnimation) {
+        chips.current.rotation[rotationAxisValue] += (delta * rotationSpeed * -speed) / Math.PI;
+      } else if (rotationDirection === 'positive' && !fancyAnimation) {
+        chips.current.rotation[rotationAxisValue] += (delta * rotationSpeed * speed) / Math.PI;
+      }
+    }
   }
-})
+});
 
 
 
 
 
 
-  const { nodes } = useGLTF("/chipLoader.gltf");
+
+
+  const { nodes } = useGLTF("/chipLoader.gltf") as any;;
   return (
     <group {...props} dispose={null}>   
         <group scale={scale} rotation={[Math.PI/2,0,0]} ref={chips}>
