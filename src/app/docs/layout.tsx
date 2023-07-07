@@ -9,25 +9,28 @@ export default function DocsLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="w-[250px] h-[964px] flex pt-8 pr-2 pb-177 pl-4 flex-column items-start gap-24 shrink-0 border-x-2 border-color );">
-        
-        <nav>
-            <div className="pt-2 pb-2 pl-4 pr-4 rounded-md bg-slate-100 mb-8 ">R3DY v1.0</div>
-                <Link href='/docs' className="flex mb-4">
-                    <Image className="mr-2 mb-5" width={24} height={24} src='./book.svg' alt='book icon' /> 
-                    Overview
-                </Link >
-                <Link href='/docs/install' className="flex mb-4">
-                    <Image className="mr-2 mb-5" width={24} height={24} src='./install.svg' alt='install icon' />
-                    Install 
-                </Link >
-            <Link href='/docs/components' className="flex">
-                <Image className="mr-2 mb-2" width={24} height={24} src='./box.svg' alt='box icon' />
-                Components
-            </Link >
-        </nav>
-      <div className=''>
+    <div className="flex flex-row">
+      <div className="fixed w-[250px] h-screen flex pt-24 px-4 flex-column border-x border-slate-200 bg-white">
+          <nav className='grow'>
+              <div className="py-2 px-4 rounded-md bg-slate-100 mb-8 max-w-[150px] text-sm">R3DY v1.0</div>
+                  <Link href='/docs' className="ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 active:text-indigo-700">
+                      <Image className="mr-4" width={24} height={24} src='./book.svg' alt='book icon' /> 
+                      <text> Overview </text>
+                  </Link >
+                  <Link href='/docs/install' className="ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 active:text-indigo-700">
+                      <Image className="mr-4" width={24} height={24} src='./install.svg' alt='install icon' />
+                      <text> Install </text>
+                  </Link >
+              <Link href='/docs/components' className="ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 active:text-indigo-700">
+                  <Image className="mr-4" width={24} height={24} src='./box.svg' alt='box icon' />
+                  <text> Components </text>
+              </Link >
+          </nav>
+      </div>
+      <div className='ml-[250px] py-20 px-8 flex bg-white justify-center items-top'>
+        <div className ='h-full w-full bg-slate-100 rounded-md p-16'>
         {children}
+        </div>
       </div>
   </div>
     
