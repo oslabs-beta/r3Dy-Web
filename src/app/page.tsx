@@ -3,8 +3,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Canvas } from '@react-three/fiber';
-import Loader from './components/Loader';
-import Switch from './components/Switch';
 import { MeshBasicMaterial, MeshStandardMaterial, MeshMatcapMaterial} from 'three';
 export default function Home() {
   
@@ -31,9 +29,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-[512px] h-full rounded">
-          <Canvas>
-            <Loader loader={1} speed={5} scale={1} color={'#4361EE'}/> 
-          </Canvas>
+      
         </div>
       </div>
       <div className='absolute w-screen h-screen'> 
