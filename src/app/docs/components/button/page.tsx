@@ -10,7 +10,7 @@ export default function Button() {
     <>
     <Title title={'Button'} icon={button} altTag={'Button Icon'} />
     <CodeBlock inline={false}>
-    console.log('Hello World!')
+    {/* console.log('Hello World!') */}
     </CodeBlock>
     </>
   )
