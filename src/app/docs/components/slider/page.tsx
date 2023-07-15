@@ -1,7 +1,11 @@
 import React from 'react'
+import slider from 'public/slider.svg'
+import Title from '../../../../../components/Title'
 
 export default function Slider() {
   return (
-    <div>Slider</div>
+    <>
+    <Title title={'Slider'} icon={slider} altTag={'Slider Icon'} />
+    </>
   )
 }
