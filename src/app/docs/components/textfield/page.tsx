@@ -1,72 +1,85 @@
 'use client'
 
 import React from 'react'
-import text from 'public/text.svg'
+import TextIcon from 'public/text.svg'
+import { Canvas } from '@react-three/fiber'
+import { TextField } from 'r3dy'
 import Title from '../../../../../components/Title'
 import Regular from '../../../../../components/Regular'
 import Header from '../../../../../components/Header'
+import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
+import InlineCode from '../../../../../components/InlineCode'
 
-export default function TextField() {
+export default function TextFieldDoc() {
   return (
     <>
-    <Title title={'Text Field'} icon={text} altTag={'Text Icon'} />
+    <Title title={'Text Field'} icon={TextIcon} altTag={'Text Icon'} />
+    <div className='h-[300px]'>
+      <Canvas shadows> 
+        <TextField/>
+      </Canvas>
+    </div>
+    <div className='h-[300px]'>
+      <Canvas shadows> 
+        <TextField theme='dark'/>
+      </Canvas>
+    </div>
     <Regular> 
       The Text Field is a 3D component that lets users enter and edit text 
       The Text Field allows users to enter their text into the 3D UI component
     </Regular>
     <Header text={'Basic TextField'}/>
-    <Regular> The <CodeBlock inline> Text Field </CodeBlock> wrapper component comes with two themes: light (default) and dark </Regular>
+    <Regular> The <InlineCode> Text Field </InlineCode> wrapper component comes with two themes: light (default) and dark </Regular>
     
-    <CodeBlock>
-      &lt;TextField theme=”light” /&gt;
-      &lt;TextField theme=”dark” /&gt;
-    </CodeBlock>
+    <CodeBlock codeString='<TextField theme=”light” />;
+    <TextField theme=”dark”/>'
+      />
 
     <Header text={'Theme'}/>
     <Regular> 
-      The <CodeBlock inline> Theme </CodeBlock> prop enables the ability to change the style of the Text Field to dark or light. 
+      The <InlineCode> Theme </InlineCode> prop enables the ability to change the style of the Text Field to dark or light. 
       By default this is set to light. 
     </Regular>
 
-
     <Header text={'OnChange'}/>
     <Regular> 
-      The <CodeBlock inline> OnChange </CodeBlock> prop takes a callback function. 
+      The <InlineCode> OnChange </InlineCode> prop takes a callback function. 
       <br/>
-      This callback function is invoked each time a change is registered on the Text Field. By default an <CodeBlock inline> event </CodeBlock> object is provided as an argument to the callback function which provides access to various properties on regarding the Text Field. To access this event object properties, you can use <CodeBlock inline> event.currentTarget </CodeBlock>.
+      This callback function is invoked each time a change is registered on the Text Field. By default an <InlineCode> event </InlineCode> object is provided as an argument to the callback function which provides access to various properties on regarding the Text Field. To access this event object properties, you can use <InlineCode> event.currentTarget </InlineCode>.
     </Regular>
 
     <Header text={'Color'}/>
     <Regular> 
-      The <CodeBlock inline> color </CodeBlock> prop enables the ability to change the color of the display text within the Text Field when typed.
+      The <InlineCode> color </InlineCode> prop enables the ability to change the color of the display text within the Text Field when typed.
     </Regular>
 
     <Header text={'Width & Height'}/>
     <Regular> 
-      The default <CodeBlock inline>width</CodeBlock> is set to <CodeBlock inline>15</CodeBlock> and the default height is set to <CodeBlock inline>3</CodeBlock>. Unlike <CodeBlock inline>pixels(px)</CodeBlock> on a screen. These number represents the size and dimensions of the rendered 3D component on the canvas.
+      The default <InlineCode>width</InlineCode> is set to <InlineCode>15</InlineCode> and the default height is set to <InlineCode>3</InlineCode>. Unlike <InlineCode>pixels(px)</InlineCode> on a screen. These number represents the size and dimensions of the rendered 3D component on the canvas.
     </Regular>
-
+    <Callout> Note: We do not recommend changing the <InlineCode>width</InlineCode> or <InlineCode>height</InlineCode>. The current dimensions are optimized to fill the canvas. The maximum height allowed is <InlineCode>5</InlineCode>. </Callout>
 
     <Header text={'Background Color'}/>
     <Regular> 
-      The default <CodeBlock inline>backgroundColor</CodeBlock> prop enables the ability to change the background color of the text field. 
+      The default <InlineCode>backgroundColor</InlineCode> prop enables the ability to change the background color of the text field. 
 
-      This effect is currently only supported when a color code is provided for the <CodeBlock inline>backgroundColor</CodeBlock> prop (e.g. <CodeBlock inline>backgroundColor=”#F4FAFF”</CodeBlock>). This will be updated soon to support all color declarations (e.g. <CodeBlock inline>backgroundColor=”red”</CodeBlock>).
+      This effect is currently only supported when a color code is provided for the <InlineCode>backgroundColor</InlineCode> prop (e.g. <InlineCode>backgroundColor=”#F4FAFF”</InlineCode>). This will be updated soon to support all color declarations (e.g. <InlineCode>backgroundColor=”red”</InlineCode>).
     </Regular>
+    <Callout> Note: <InlineCode> backgroundColor </InlineCode> will automatically darken <InlineCode> onFocus </InlineCode> to for an improved UI experience.</Callout>
 
     <Header text={'Fonts'}/>
     <Regular> 
-      Alternative fonts can be provided to Text Field through the <CodeBlock inline>font</CodeBlock> prop. 
+      Alternative fonts can be provided to Text Field through the <InlineCode>font</InlineCode> prop. 
 
-      The default font used is <CodeBlock inline>Inter-bold</CodeBlock>. Unlike your typical text field, this 3D Text Field requires access to the font <CodeBlock inline>.ttf</CodeBlock> file. To properly change the font, it is recommended that you upload the .<CodeBlock inline>.ttf</CodeBlock>  font file into a <CodeBlock inline>font</CodeBlock>  directory on your project’s root and pass the path to the <CodeBlock inline>font</CodeBlock>  prop. (e.g. <CodeBlock inline>font=”fonts/Inter-Bold.ttf”</CodeBlock> ).
+      The default font used is <InlineCode>Inter-bold</InlineCode>. Unlike your typical text field, this 3D Text Field requires access to the font <InlineCode>.ttf</InlineCode> file. To properly change the font, it is recommended that you upload the .<InlineCode>.ttf</InlineCode>  font file into a <InlineCode>font</InlineCode>  directory on your project’s root and pass the path to the <InlineCode>font</InlineCode>  prop. (e.g. <InlineCode>font=”fonts/Inter-Bold.ttf”</InlineCode> ).
     </Regular>
 
     <Header text={'Font Size'}/>
     <Regular> 
-    The <CodeBlock inline>fontSize</CodeBlock> prop allows you to change the size of the 3D font on the Text Field. 
+    The <InlineCode>fontSize</InlineCode> prop allows you to change the size of the 3D font on the Text Field. 
 
-    Similarly to the <CodeBlock inline>height</CodeBlock> and <CodeBlock inline>width</CodeBlock> props, the <CodeBlock inline>fontSize</CodeBlock> represents the size and dimensions of the rendered 3D text on the canvas. The default fontSize is set to `1`.
+    Similarly to the <InlineCode>height</InlineCode> and <InlineCode>width</InlineCode> props, the <InlineCode>fontSize</InlineCode> represents the size and dimensions of the rendered 3D text on the canvas. The default fontSize is set to `1`.
     </Regular>
 
     </>
