@@ -7,6 +7,7 @@ import Switch from 'src/app/components/Switch.tsx';
 import TextField from 'src/app/components/TextField.tsx';
 import Slider from 'src/app/components/Slider.tsx';
 import Loader from 'src/app/components/Loader.tsx';
+import LogoLoader from 'src/app/components/LogoLoader.tsx';
 import { useState } from 'react';
 
 export default function Components() {
@@ -37,7 +38,7 @@ export default function Components() {
       <h3 className='font-extrabold text-xl mb-4'>Text Field</h3>
       <div className='w-full h-[300px] p-8 border border-[#3F37C9] bg-white rounded-md'>
         <Canvas>
-          <TextField />
+          <TextField width={20} height={3}/>
         </Canvas> 
         </div>
       </div>

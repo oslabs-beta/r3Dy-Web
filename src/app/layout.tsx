@@ -3,7 +3,8 @@ import Image from 'next/image'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
-
+import { Canvas } from './components/exports';
+import LogoLoader from './components/LogoLoader.tsx';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -21,7 +22,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav className='z-10 fixed top-0 flex w-full align-middle py-2 px-8 justify-between border border-slate-200 bg-white'>
           <Link href='/' className='flex align-middle'>
-            <Image width={176} height={40} src='./nav-logo.svg' alt='r3dy-logo-full'/>
+            <div className="flex w-16 h-14 mb-1">
+            <Canvas> <LogoLoader/> </Canvas>
+            </div>
+            <Image width={176} height={40} src='./text-logo.svg' alt='r3dy-logo-full'/>
           </Link>
           <div className='flex w-full items-center justify-center'>
 
