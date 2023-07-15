@@ -62,3 +62,16 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+
+
+@layer components {
+  .doc-link {
+    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 active:text-indigo-700;
+  }
+  .doc-btn {
+    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow w-full rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 active:text-indigo-700;
+  }
+  .nav-link {
+    @apply bg-white flex align-middle font-medium text-sm px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700 active:text-indigo-700;
+  }
+}
