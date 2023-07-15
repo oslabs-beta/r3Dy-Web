@@ -1,7 +1,11 @@
 import React from 'react'
+import Title from '../../../../components/Title'
+import InstallIcon from 'public/install.svg'
 
 export default function Install() {
   return (
-    <div>Install</div>
+    <>
+    <Title title="Install" icon={InstallIcon} altTag='Install Icon'/>
+    </>
   )
 }
