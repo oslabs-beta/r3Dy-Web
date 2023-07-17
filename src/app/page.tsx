@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image'
 import Link from 'next/link'
 import { Canvas } from '@react-three/fiber';
@@ -29,10 +28,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="w-[512px] h-full rounded">
-        <Canvas>
-        <Loader color='purple' matcapIndex={40} rotationAxis='x'/>
-        </Canvas>
+        <div className="w-[512px]">
+          <Canvas>
+            <Loader color='purple' matcapIndex={40} rotationAxis='x'/>
+          </Canvas>
         </div>
       </div>
       <div className='absolute w-screen h-screen'> 
