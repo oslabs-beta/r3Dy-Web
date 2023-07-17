@@ -18,7 +18,7 @@ export default function RootLayout({
 {
   return (
     <html lang="en">
-      <body className={`${inter.className} pt-14`} suppressHydrationWarning={true} >
+      <body className={`${inter.className} pt-14 bg-white dark:darkmode-backround`} suppressHydrationWarning={true}>
       <Navigation/>
           {children}
       </body>
