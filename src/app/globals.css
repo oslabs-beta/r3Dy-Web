@@ -75,7 +75,7 @@ line-height: normal;
     @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow w-full rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700;
   }
   .nav-link {
-    @apply bg-white flex align-middle font-medium text-sm mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700;
+    @apply bg-white flex align-middle font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700;
   }
   .nav-link-active {
     @apply flex align-middle font-medium text-sm mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 bg-[#E3E7FC] text-indigo-700;
