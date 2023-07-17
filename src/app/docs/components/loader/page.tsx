@@ -8,6 +8,8 @@ import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
+import { Canvas } from '@react-three/fiber'
+import { Loader } from 'r3dy'
 
 
 const example1: string  = 
@@ -50,10 +52,29 @@ export default function App() {
 
 
 
-export default function Loader() {
+export default function LoaderDoc() {
   return (
     <>
     <Title title={'Loader'} icon={loader} altTag={'Loader Icon'} />
+  
+    <div className='flex justify-around align-center py-7'>
+        <div className="w-64 h-64">
+        <Canvas>
+            <Loader model={1} theme='dark' scale={1.03}/>
+        </Canvas>
+        </div>
+        <div className="w-64 h-64">
+        <Canvas>
+          <Loader model={2} theme='dark' />
+        </Canvas>
+        </div>
+        <div className="w-64 h-64">
+        <Canvas>
+          <Loader model={3} theme='dark' />
+        </Canvas>
+        </div>
+      </div>
+
     <Regular> 
       The Loader component is a 3D loading animation that comes standard
       with three different models that can be easily dropped into your project.
