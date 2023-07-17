@@ -1,9 +1,7 @@
 'use client'
 
-
 import toggle from 'public/toggle.svg'
 import React from 'react'
-import text from 'public/text.svg'
 import Title from '../../../../../components/Title'
 import Regular from '../../../../../components/Regular'
 import Header from '../../../../../components/Header'

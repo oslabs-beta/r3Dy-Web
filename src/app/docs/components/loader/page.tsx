@@ -11,7 +11,7 @@ import InlineCode from '../../../../../components/InlineCode'
 
 
 const example1: string  = 
-`<Loader theme="light />"
+`<Loader theme="light" />
 <Loader theme="dark" />
 `
 

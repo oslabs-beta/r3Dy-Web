@@ -12,6 +12,12 @@ import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
 
 export default function TextFieldDoc() {
+
+
+  const codeExample: string = `<TextField theme=”light” />;
+<TextField theme=”dark”/>;`
+
+
   return (
     <>
     <Title title={'Text Field'} icon={TextIcon} altTag={'Text Icon'} />
@@ -32,8 +38,7 @@ export default function TextFieldDoc() {
     <Header text={'Basic TextField'}/>
     <Regular> The <InlineCode> Text Field </InlineCode> wrapper component comes with two themes: light (default) and dark </Regular>
     
-    <CodeBlock codeString='<TextField theme=”light” />;
-    <TextField theme=”dark”/>'
+    <CodeBlock codeString={codeExample}
       />
 
     <Header text={'Theme'}/>
