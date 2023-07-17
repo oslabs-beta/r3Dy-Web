@@ -9,9 +9,7 @@ export default function Button() {
   return (
     <>
     <Title title={'Button'} icon={button} altTag={'Button Icon'} />
-    <CodeBlock inline={false}>
-    {/* console.log('Hello World!') */}
-    </CodeBlock>
+    <CodeBlock codeString={`console.log('Hello World!')`}/>
     </>
   )
 }

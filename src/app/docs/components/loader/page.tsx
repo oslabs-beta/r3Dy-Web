@@ -13,7 +13,7 @@ import { Loader } from 'r3dy'
 
 
 const example1: string  = 
-`<Loader theme="light />"
+`<Loader theme="light" />
 <Loader theme="dark" />
 `
 
