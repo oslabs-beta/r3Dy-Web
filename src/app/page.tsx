@@ -35,20 +35,20 @@ export default function Home() {
 
         {/* DISPLAY LOADER */}
         <div className="md:w-[512px] md:h-[512px] w-full h-[250px]">
-          <Canvas>
+          {/* <Canvas>
             <Loader color='purple' matcapIndex={40} rotationAxis='x'/>
-          </Canvas>
+          </Canvas> */}
         </div>
       </div>
 
       {/* DISPLAY BG MESH */}
       <div className='absolute w-screen h-3/5'> 
-      <Canvas> 
+      {/* <Canvas> 
           <mesh position-y={1} position-z={-1} rotation-x={-1}>
             <planeGeometry args={[20,20,20,20]} />
             <meshBasicMaterial wireframe={true} color='#C1C5E5'/>
           </mesh>
-      </Canvas>
+      </Canvas> */}
       </div>
     </section>
     {/* DISPLAY FOOTER */}
