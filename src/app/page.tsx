@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Canvas } from '@react-three/fiber';
 import { MeshBasicMaterial, MeshStandardMaterial, MeshMatcapMaterial} from 'three';
 import { Loader, Switch, Slider, TextField, Button } from 'r3dy';
+import Footer from '../../components/Footer';
 export default function Home() {
   
   const copyClipboard = (): void => {
@@ -12,6 +13,7 @@ export default function Home() {
   
   
   return (
+    <>
     <section className='flex h-full w-full align-center justify-center md:py-36 py-16 md:px-8 overflow-hidden'>
       <div className="w-full md:flex justify-center block md:pr-8 p-4 z-10">
         <div className="p-4 max-w-[1024px]">
@@ -30,20 +32,27 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        {/* DISPLAY LOADER */}
         <div className="md:w-[512px] md:h-[512px] w-full h-[250px]">
           <Canvas>
             <Loader color='purple' matcapIndex={40} rotationAxis='x'/>
           </Canvas>
         </div>
       </div>
-      <div className='absolute w-screen h-screen'> 
-      <Canvas > 
-          <mesh position-y={2} position-z={-1} rotation-x={-1}>
+
+      {/* DISPLAY BG MESH */}
+      <div className='absolute w-screen h-3/5'> 
+      <Canvas> 
+          <mesh position-y={1} position-z={-1} rotation-x={-1}>
             <planeGeometry args={[20,20,20,20]} />
-            <meshBasicMaterial wireframe={true} color='#DDDFE1'/>
+            <meshBasicMaterial wireframe={true} color='#C1C5E5'/>
           </mesh>
       </Canvas>
       </div>
     </section>
+    {/* DISPLAY FOOTER */}
+    <Footer/>
+    </>
   )
 }
