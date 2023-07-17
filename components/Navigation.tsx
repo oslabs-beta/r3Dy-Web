@@ -37,7 +37,7 @@ export default function Navigation() {
       </div>
 
       <div className='flex w-full h-full justify-end'>
-      <button className='p-2 mr-2 bg-white rounded-md hover:bg-slate-200 flex items-cent'><Image width={24} height={24} src='/moon.svg' alt='moon-icon'/></button>
+      <button className='p-2 mr-2 bg-white rounded-md hover:bg-slate-200 flex items-center'><Image width={24} height={24} src='/moon.svg' alt='moon-icon'/></button>
       <a href='https://github.com/oslabs-beta/r3Dy' target='_blank' className='p-2 bg-white rounded-md hover:bg-slate-200'><Image width={24} height={24} src='/github.svg' alt='github-icon'/></a>
       
       {/* MOBILE HAMBURGER */}
