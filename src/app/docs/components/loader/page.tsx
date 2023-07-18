@@ -69,7 +69,7 @@ export default function LoaderDoc() {
         </div>
         <div className="w-64 h-64">
         <Canvas>
-          <Loader model={2} color='lightblue' />
+          <Loader model={2} color='white' />
         </Canvas>
         </div>
         <div className="w-64 h-64">
@@ -130,6 +130,13 @@ export default function LoaderDoc() {
     <CodeBlock codeString={example2} />
 
     </Regular>
+
+    <Callout>
+    Note: The easing animation feature is currently in an experimental phase, and it may behave unpredictably if rendered for a long time.
+      </Callout>
+      <Callout>
+      Note: You can directly import specific loader models like <InlineCode>HexagonLoader</InlineCode>, <InlineCode>ChipLoader</InlineCode>, and <InlineCode>MeshLoader</InlineCode> for additional customization options without supplying the <InlineCode>model</InlineCode> prop.
+      </Callout>
 
     </>
   )

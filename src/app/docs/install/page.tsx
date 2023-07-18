@@ -32,7 +32,7 @@ import { Switch } from 'r3dy'
     <Header text={'NPM Package'}/>
     <CodeBlock codeString={'npm install r3dy'}></CodeBlock>
     <Header text={'Implementation'}/>
-    <Regular> Once youve installed the npm package, its time to add a component to your project. In the code snippet below, you can see how this is implemented.  </Regular>
+    <Regular> Once you've installed the npm package, its time to add a component to your project. In the code snippet below, you can see how this is implemented.  </Regular>
     <CodeBlock codeString={implementationCode}></CodeBlock>
     <Callout> Note: As you can see, the above code generated the switch below it. However there are a few things you want to make note of.  </Callout>
     <div className="flex justify-center">

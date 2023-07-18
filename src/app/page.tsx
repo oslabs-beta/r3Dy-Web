@@ -58,7 +58,7 @@ export default function Home() {
         </div>
         <div className="md:w-[512px] md:h-[512px] w-full h-[250px] ">
           <Canvas>
-            <Loader color='purple' matcapIndex={40} rotationAxis='x'/>
+            <Loader color={darkModeState ? 'white' : 'purple'} matcapIndex={40} rotationAxis='x'/>
           </Canvas> 
         </div>
       </div>

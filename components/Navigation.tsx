@@ -82,7 +82,7 @@ export default function Navigation() {
         }}>
           <Image width={24} height={24} src={darkModeState ? '/book-white.svg' : '/book.svg'} alt='book-icon' className='mr-4' />
           Docs
-          {subDrop ? <Image className="mr-4 justify-self-end ml-auto" width={24} height={24} src='/down.svg' alt='arrow icon' /> : <Image className="mr-4 -rotate-90 justify-self-end	ml-auto" width={24} height={24} src='/down.svg' alt='arrow icon' />}
+          {subDrop ? <Image className="mr-4 justify-self-end ml-auto" width={24} height={24} src={darkModeState ? '/down-white.svg' : '/down.svg'} alt='arrow icon' /> : <Image className="mr-4 -rotate-90 justify-self-end	ml-auto" width={24} height={24} src={darkModeState ? '/down-white.svg' : '/down.svg'} alt='arrow icon' />}
         </ button>
         {subDrop && (
           <div className='grow ml-6'>
