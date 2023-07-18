@@ -40,12 +40,26 @@ body {
   color: transparent;
 }
 
+.dark #project-contributors {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: white;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  color: transparent;
+}
+
 #meet-the-team-text {
 font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+
+
 
 #main-header {
   background: linear-gradient(to right, #3F37C9, #560BAD, #B5179E);
@@ -55,29 +69,38 @@ line-height: normal;
   color: transparent;
 }
 
-#landing-text {
-color: var(--grey-2, #415A77);
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+.dark #main-header {
+  background: white;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
 
 
 @layer components {
   .doc-link {
-    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700;
+    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 dark:hover:text-violet-500 dark:text-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700;
   }
   .doc-link-active {
-    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md bg-[#E3E7FC] text-sm font-medium text-indigo-700;
+    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md bg-[#E3E7FC] text-sm font-medium text-indigo-700 dark:text-violet-500 dark:bg-slate-700;
   }
   .doc-btn {
     @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow w-full rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700;
   }
   .nav-link {
-    @apply bg-white flex align-middle font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700;
+    @apply bg-white flex align-middle font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700 dark:hover:text-violet-500 dark:text-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700;
   }
   .nav-link-active {
-    @apply flex align-middle font-medium text-sm mx-2 my-2 px-4 py-2 rounded-md ease-linear transition duration-150 bg-[#E3E7FC] text-indigo-700;
+    @apply flex align-middle font-medium text-sm mx-2 my-2 px-4 py-2 rounded-md ease-linear transition duration-150 bg-[#E3E7FC] text-indigo-700 dark:bg-slate-700 dark:text-violet-500;
+  }
+  .basic-transition {
+    @apply ease-linear transition duration-150;
+  }
+  .darkmode-backround {
+    @apply bg-slate-800
+  }
+  .darkmode-text {
+    @apply text-violet-500
   }
 }

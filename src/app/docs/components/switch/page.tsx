@@ -1,6 +1,7 @@
 'use client'
 
 import toggle from 'public/toggle.svg'
+import toggleWhite from 'public/toggle-white.svg'
 import React from 'react'
 import Title from '../../../../../components/Title'
 import Regular from '../../../../../components/Regular'
@@ -8,13 +9,15 @@ import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
+import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
 
 export default function SwitchDoc() {
+  const darkModeState = useSelector((state) => state.darkMode.value);
   return (
     <>
-    <Title title={'Switch'} icon={toggle} altTag={'Switch Icon'} />
+    <Title title={'Switch'} icon={darkModeState ? toggleWhite : toggle} altTag={'Switch Icon'} />
     <div className='flex justify-center'>
       <div className=' flex w-4/5 '>
         <Canvas shadows>

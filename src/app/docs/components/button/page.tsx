@@ -4,12 +4,13 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Button } from 'r3dy'
 import button from 'public/button.svg'
+import buttonWhite from 'public/button-white.svg'
 import Title from '../../../../../components/Title'
 import CodeBlock from '../../../../../components/CodeBlock'
 import Header from '../../../../../components/Header'
 import Regular from '../../../../../components/Regular'
 import InlineCode from '../../../../../components/InlineCode'
-
+import { useSelector } from 'react-redux';
 // Test example 
 
 const example: string = 
@@ -28,9 +29,12 @@ export default function App() {
 }`
 
 export default function ButtonDocs() {
+
+  const darkModeState = useSelector((state) => state.darkMode.value);
+
   return (
     <>
-    <Title title={'Button'} icon={button} altTag={'Button Icon'} />
+    <Title title={'Button'} icon={darkModeState ? buttonWhite : button} altTag={'Button Icon'} />
     <div className='h-[300px]'>
       <Canvas > 
         <Button />

@@ -8,6 +8,6 @@ type RegularProps = {
 
 export default function Regular( {children}:RegularProps) {
   return (
-    <div className='mb-2 align-middle inline-block leading-6'>{ children }</div>
+    <div className='mb-2 align-middle inline-block leading-6 dark:text-white'>{ children }</div>
   )
 }
