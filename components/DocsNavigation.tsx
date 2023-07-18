@@ -26,7 +26,7 @@ export default function DocsNavigation() {
                         <Image className="mr-4" width={24} height={24} src={ darkModeState ? '/install-white.svg' : '/install.svg'} alt='install icon' />
                         <p> Install </p>
                     </Link >
-                    <button onClick={() => setDropdown(!dropdown)} className="nav-link ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow w-full rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 active:text-indigo-700">
+                    <button onClick={() => setDropdown(!dropdown)} className="nav-link ease-linear transition duration-150 ml-0 px-2 py-4 flex items-center mb-4 grow w-full rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 active:text-indigo-700">
                         <Image className="mr-4" width={24} height={24} src={darkModeState ? '/box-white.svg' : '/box.svg'} alt='box icon' />
                         <p className='w-full text-left'> Components </p>
                         {dropdown ? <Image className="mr-4 " width={24} height={24} src={darkModeState ? '/down-white.svg' : '/down.svg'} alt='arrow icon' /> : <Image className="mr-4 -rotate-90" width={24} height={24} src={darkModeState ? '/down-white.svg' : '/down.svg'} alt='arrow icon' />}
