@@ -28,16 +28,19 @@ export default function Navigation() {
 
   useEffect(() => {
     const preferDark = window.watchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (preferDark) setDarkMode(true);
+    if (preferDark) {
+      setDarkMode(true);
+      store.dispatch(toggleDarkMode())
+    }
   },[]);
 
   useEffect(() => {
-    if (darkMode) {
+    if (darkModeState) {
       document.body.classList.add('dark');
     } else {
       document.body.classList.remove('dark');
     }
-  },[darkMode]);
+  },[darkModeState]);
 
 
   return (
