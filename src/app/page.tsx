@@ -42,7 +42,7 @@ export default function Home() {
       <div className="w-full md:flex justify-center block md:pr-8 p-4 z-10">
         <div className="p-4 max-w-[1024px]">
           <div className='flex justify-center md:justify-start'>
-            <Image width={120} height={30} className='mb-5' src='./logo-dark.svg' alt='r3dy-logo-dark-full'/>
+            <Image width={120} height={30} className='mb-5' src={ darkModeState ? './footer-logo.svg' : './logo-dark.svg' } alt='r3dy-logo-dark-full'/>
           </div>
           <h1 id='main-header' className="basic-transition text-5xl font-black text-center md:text-left mb-8">Interactive 3D React UI components.</h1>
           <p id='landing-text' className="basic-transition text-[#415A77] text-base font-medium leading-normal text-center md:text-left dark:text-slate-50">R3DY UI is a growing suite of 3D components, built to help take your existing 2D projects into 3D.</p>

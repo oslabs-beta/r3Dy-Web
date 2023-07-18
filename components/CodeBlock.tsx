@@ -19,7 +19,7 @@ export default function Overview({ codeString, enableSandbox, sandboxLink }: cod
 
   return ( 
     <>
-    <div className="">
+    <div>
       <div className='max-w-2x1 min-w-[15rem] bg-[#3a404d] rounded-md overflow-hidden'>
         <div className='flex justify-between px-4 text-white text-xs item-center mt-3'>
           <p className='text-sm mt-1'>Example</p>

@@ -1,6 +1,5 @@
 'use client';
 import { configureStore } from '@reduxjs/toolkit'
-import userReducer from './userSlice'
 import darkModeReducer from './Features/darkmode/darkModeSlice'
 
 export const store = configureStore({
