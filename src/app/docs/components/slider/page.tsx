@@ -2,6 +2,7 @@
 
 import React, {useState} from 'react'
 import sliderIMG from 'public/slider.svg'
+import sliderIMGWhite from 'public/slider-white.svg'
 import Title from '../../../../../components/Title'
 import Regular from '../../../../../components/Regular'
 import Header from '../../../../../components/Header'
@@ -41,8 +42,9 @@ export default function SliderDoc() {
 
   
   return (
+    
     <>
-    <Title title={'Slider'} icon={sliderIMG} altTag={'Slider Icon'} />
+    <Title title={'Slider'} icon={darkModeState ? sliderIMGWhite : sliderIMG} altTag={'Slider Icon'} />
     
     <div className='h-[300px]'>
     <Canvas>

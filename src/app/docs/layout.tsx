@@ -11,14 +11,13 @@ export default function DocsLayout({
 {
   
   return (
-    <section className="flex h-full">
+    <section className="basic-transition flex h-full dark:darkmode-backround">
         <DocsNavigation />
-      <section className='ml-[250px] p-8 flex bg-white justify-center items-top w-full'>
-        <div className ='h-full w-full bg-slate-100 rounded-md p-8'>
+      <section className='basic-transition ml-[250px] p-8 flex bg-white justify-center items-top w-full dark:darkmode-backround'>
+        <div className ='basic-transition h-full w-full bg-slate-100 rounded-md p-8 dark:bg-slate-700'>
         {children}
         </div>
       </section>
   </section>
-    
   )
 }

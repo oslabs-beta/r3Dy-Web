@@ -2,12 +2,16 @@
 
 import React from 'react'
 import loader from 'public/loader.svg'
+import loaderWhite from 'public/loader-white.svg'
 import Title from '../../../../../components/Title'
 import Regular from '../../../../../components/Regular'
 import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
+import { useSelector } from 'react-redux';
+import { Canvas } from '@react-three/fiber'
+import { Loader } from 'r3dy'
 
 
 const example1: string  = 
@@ -50,10 +54,31 @@ export default function App() {
 
 
 
-export default function Loader() {
+export default function LoaderDoc() {
+
+  const darkModeState = useSelector((state) => state.darkMode.value);
   return (
     <>
-    <Title title={'Loader'} icon={loader} altTag={'Loader Icon'} />
+    <Title title={'Loader'} icon={darkModeState ? loaderWhite : loader} altTag={'Loader Icon'} />
+  
+    <div className='flex justify-around align-center py-7'>
+        <div className="w-64 h-64">
+        <Canvas>
+            <Loader model={1} color='lightblue' scale={1.03}/>
+        </Canvas>
+        </div>
+        <div className="w-64 h-64">
+        <Canvas>
+          <Loader model={2} color='lightblue' />
+        </Canvas>
+        </div>
+        <div className="w-64 h-64">
+        <Canvas>
+          <Loader model={3} color='lightblue' />
+        </Canvas>
+        </div>
+      </div>
+
     <Regular> 
       The Loader component is a 3D loading animation that comes standard
       with three different models that can be easily dropped into your project.

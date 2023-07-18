@@ -23,6 +23,13 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      backgroundImage: ['dark'],
+      textColor: ['dark'],
+    },
+  },
   plugins: [
     require('@tailwindcss/container-queries'),
   ],
