@@ -80,27 +80,27 @@ line-height: normal;
 
 @layer components {
   .doc-link {
-    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 dark:hover:text-violet-500 dark:text-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700;
+    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700 dark:hover:text-[#9A81FF] dark:text-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700;
   }
   .doc-link-active {
-    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md bg-[#E3E7FC] text-sm font-medium text-indigo-700 dark:text-violet-500 dark:bg-slate-700;
+    @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow rounded-md bg-[#E3E7FC] text-sm font-medium text-indigo-700 dark:text-[#9A81FF] dark:bg-slate-700;
   }
   .doc-btn {
     @apply ease-linear transition duration-150 px-2 py-4 flex items-center mb-4 grow w-full rounded-md hover:bg-[#E3E7FC] text-sm font-medium hover:text-indigo-700;
   }
   .nav-link {
-    @apply bg-white flex align-middle font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700 dark:hover:text-violet-500 dark:text-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700;
+    @apply bg-white flex align-middle content-center font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700 dark:hover:text-[#9A81FF] dark:text-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700;
   }
   .nav-link-active {
-    @apply flex align-middle font-medium text-sm mx-2 my-2 px-4 py-2 rounded-md ease-linear transition duration-150 bg-[#E3E7FC] text-indigo-700 dark:bg-slate-700 dark:text-violet-500;
+    @apply flex align-middle content-center font-medium text-sm mx-2 my-2 px-4 py-2 rounded-md ease-linear transition duration-150 bg-[#E3E7FC] text-indigo-700 dark:bg-slate-700 dark:text-[#9A81FF];
   }
   .basic-transition {
     @apply ease-linear transition duration-150;
   }
   .darkmode-backround {
-    @apply bg-slate-800
+    @apply bg-[#0D1B2A];
   }
   .darkmode-text {
-    @apply text-violet-500
+    @apply text-[#9A81FF];
   }
 }

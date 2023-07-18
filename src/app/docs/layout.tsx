@@ -18,6 +18,6 @@ export default function DocsLayout({
         {children}
         </div>
       </section>
-  </section>
+    </section>
   )
 }
