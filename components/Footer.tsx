@@ -24,7 +24,7 @@ export default function Footer() {
                 <div className='flex flex-col w-[150px] mb-8 md:mb-0'>
                 <Link href='/about-us' className='text-[#4895EF] font-bold mb-4 hover:text-[#1478eb] w-[90px]'>About us</Link>
                 <Link href='https://github.com/bryanltrang' target='_blank' className='text-[#F0F1F1] text-[14px] w-[90px] font-light py-2 hover:text-[#97a6ba]'>Bryan Trang</Link>
-                <Link href='https://github.com/alecjessen' target='_blank' className='text-[#F0F1F1] text-[14px] w-[90px] font-light py-2 hover:text-[#97a6ba]'>Alex Jessen</Link>
+                <Link href='https://github.com/alecjessen' target='_blank' className='text-[#F0F1F1] text-[14px] w-[90px] font-light py-2 hover:text-[#97a6ba]'>Alec Jessen</Link>
                 <Link href='https://github.com/18gwoo' target='_blank' className='text-[#F0F1F1] text-[14px] w-[90px] font-light py-2 hover:text-[#97a6ba]'>Garrett Woo</Link>
                 <Link href='https://github.com/nrking913' target='_blank' className='text-[#F0F1F1] text-[14px] w-[90px] font-light py-2 hover:text-[#97a6ba]'>Nick King</Link>
                 <Link href='https://github.com/corsodr' target='_blank' className='text-[#F0F1F1] text-[14px] w-[90px] font-light py-2 hover:text-[#97a6ba]'>Corso Rosati</Link>

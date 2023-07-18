@@ -40,12 +40,26 @@ body {
   color: transparent;
 }
 
+.dark #project-contributors {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  background: white;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;
+  color: transparent;
+}
+
 #meet-the-team-text {
 font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
 }
+
+
 
 #main-header {
   background: linear-gradient(to right, #3F37C9, #560BAD, #B5179E);

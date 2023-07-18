@@ -2,6 +2,8 @@
 
 import React from 'react'
 import TextIcon from 'public/text.svg'
+import TextIconWhite from 'public/text-white.svg'
+import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { TextField } from 'r3dy'
 import Title from '../../../../../components/Title'
@@ -17,10 +19,10 @@ export default function TextFieldDoc() {
   const codeExample: string = `<TextField theme=”light” />;
 <TextField theme=”dark”/>;`
 
-
+const darkModeState = useSelector((state) => state.darkMode.value);
   return (
     <>
-    <Title title={'Text Field'} icon={TextIcon} altTag={'Text Icon'} />
+    <Title title={'Text Field'} icon={darkModeState ? TextIconWhite : TextIcon} altTag={'Text Icon'} />
     <div className='h-[300px]'>
       <Canvas shadows> 
         <TextField/>

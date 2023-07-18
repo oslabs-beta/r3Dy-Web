@@ -2,12 +2,14 @@
 
 import React, {useState} from 'react'
 import sliderIMG from 'public/slider.svg'
+import sliderIMGWhite from 'public/slider-white.svg'
 import Title from '../../../../../components/Title'
 import Regular from '../../../../../components/Regular'
 import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
+import { useSelector } from 'react-redux'; 
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { synthwave84, okaidia, prism, dark, twilight, coy, tomorrow} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Slider } from 'r3dy'
@@ -49,10 +51,11 @@ export default function SliderDoc() {
     padding: "0.2em 0.4em",
     fontWeight: "600",
   }
-  
+  const darkModeState = useSelector((state) => state.darkMode.value);
   return (
+    
     <>
-    <Title title={'Slider'} icon={sliderIMG} altTag={'Slider Icon'} />
+    <Title title={'Slider'} icon={darkModeState ? sliderIMGWhite : sliderIMG} altTag={'Slider Icon'} />
     
     <div className='h-[300px]'>
     <Canvas>

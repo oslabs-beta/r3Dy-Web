@@ -2,6 +2,7 @@
 import {useState, useEffect } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
+import { useSelector, useDispatch } from 'react-redux'
 import { Canvas } from '@react-three/fiber';
 import { MeshBasicMaterial, MeshStandardMaterial, MeshMatcapMaterial} from 'three';
 import { Loader, Switch, Slider, TextField, Button } from 'r3dy';
@@ -12,7 +13,10 @@ export default function Home() {
   const copyClipboard = (): void => {
     navigator.clipboard.writeText('npm install r3dy');
   };
-  
+
+  const darkModeState = useSelector((state) => state.darkMode.value); // current redux store state
+
+
   useEffect(() => {
     const observer = new MutationObserver((mutationsList) => {
         for(let mutation of mutationsList) {
@@ -33,6 +37,7 @@ export default function Home() {
 
 
   return (
+    <>
     <section className='basic-transition flex h-full w-full align-center justify-center md:py-36 py-16 md:px-8 overflow-hidden dark:darkmode-backround'>
       <div className="w-full md:flex justify-center block md:pr-8 p-4 z-10">
         <div className="p-4 max-w-[1024px]">
@@ -54,21 +59,21 @@ export default function Home() {
         <div className="md:w-[512px] md:h-[512px] w-full h-[250px] ">
           <Canvas>
             <Loader color='purple' matcapIndex={40} rotationAxis='x'/>
-          </Canvas> */}
+          </Canvas> 
         </div>
       </div>
 
       {/* DISPLAY BG MESH */}
       <div className='basic-transition absolute w-screen h-3/5 dark:darkmode-backround'> 
-      {/* <Canvas> 
+      <Canvas> 
           <mesh position-y={1} position-z={-1} rotation-x={-1}>
             <planeGeometry args={[20,20,20,20]} />
-            <meshBasicMaterial wireframe={true} color={planeColor}/>
+            <meshBasicMaterial wireframe={true} color={darkModeState ? 'green' : '#DDDFE1'} />
           </mesh>
-      </Canvas> */}
+      </Canvas>
       </div>
     </section>
-    {/* DISPLAY FOOTER */}
+
     <Footer/>
     </>
   )
