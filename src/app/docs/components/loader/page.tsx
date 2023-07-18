@@ -61,7 +61,7 @@ export default function LoaderDoc() {
     <>
     <Title title={'Loader'} icon={darkModeState ? loaderWhite : loader} altTag={'Loader Icon'} />
   
-    <div className='flex justify-around align-center py-7'>
+    <div className='flex flex-wrap justify-around align-center py-7'>
         <div className="w-64 h-64">
         <Canvas>
             <Loader model={1} color='lightblue' scale={1.03}/>
