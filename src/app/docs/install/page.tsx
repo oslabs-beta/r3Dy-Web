@@ -13,8 +13,7 @@ import { Switch } from 'r3dy'
 
 export default function Install() {
 
-  const implementationCode: string = `'use client'
-
+  const implementationCode: string = `
 import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
   
