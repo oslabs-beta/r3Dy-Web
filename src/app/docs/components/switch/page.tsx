@@ -32,7 +32,7 @@ export default function SwitchDoc() {
     <>
     <Title title={'Switch'} icon={darkModeState ? toggleWhite : toggle} altTag={'Switch Icon'} />
     <div className='flex justify-center'>
-      <div className=' flex w-4/5 '>
+      <div className='flex w-4/5'>
         <Canvas shadows>
             <Switch model={1}/>
         </Canvas>
