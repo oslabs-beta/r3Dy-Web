@@ -133,6 +133,12 @@ export default function LoaderDoc() {
     <CodeBlock codeString='<Loader model={2} />'/>
     </Regular>
 
+    <Header text={'Position'}/>
+    <Regular> 
+      The <InlineCode> Position </InlineCode> prop allows the ability to change the X, Y, and Z properties of the Loader. 
+      This prop accepts an Array of 3 values, <InlineCode>[X, Y, Z]</InlineCode>. By default the position is set to <InlineCode>[0,0,0]</InlineCode>.
+    </Regular>
+
     {/* <Header text={'Code Sample'}/>
     <Regular> 
     Below is an example use of the 3D Loader component:

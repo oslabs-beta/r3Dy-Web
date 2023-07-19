@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image'
 import React from 'react'
 import Footer from '../../../components/Footer'
@@ -24,11 +25,14 @@ export default function About() {
       <div className='flex md:flex-row flex-col max-w-3xl content-center w-full text-center md:text-left'>
         <div className='md:pr-8'>
           <h2 className='basic-transition text-indigo-700 text-2xl font-extrabold mb-4 dark:text-white'>Our Story</h2>
-          <h3 id='landing-text' className='basic-transition mb-8 dark:text-white'>R3DY UI was started on June 2023 by a team of remote engineers.</h3>
-          <p className='basic-transition dark:text-white'>With the rise of VR/AR platforms and applications, we saw the need to further extend the capabilities of the already powerful Three.js and React to incorporate interactive and easy-to-implement 3D components. 
+          <h3 id='landing-text' className='basic-transition mb-8 dark:text-white'>R3DY UI is an open-source product maintained by OS Labs, an open-source tech accelerator.</h3>
+          <p className='basic-transition dark:text-white'>We believe that adding 3D to your React projects should be as easy as importing any other React component that you've built. Our mission is to become the premiere 3D library for those looking to add unique interactable components to their React projects.
           <br/>
           <br/>
           R3DY UI allows any engineer to efficiently develop their 3D applications.
+          <br/>
+          <br/>
+          Check us out!
           </p>
           <div className="flex justify-center md:justify-start mt-8">
             <iframe className='block' src="https://ghbtns.com/github-btn.html?user=oslabs-beta/r3Dy&type=follow&count=true&size=large" width="300" height="30" title="GitHub"></iframe>
