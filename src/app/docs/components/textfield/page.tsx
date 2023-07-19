@@ -47,11 +47,10 @@ const darkModeState = useSelector((state:RootState) => state.darkMode.value);
       </Canvas>
     </div>
     <Regular> 
-      The Text Field is a 3D component that lets users enter and edit text 
-      The Text Field allows users to enter their text into the 3D UI component
+      The Text Field is a 3D component that can be used to capture text from users.
     </Regular>
     <Header text={'Basic TextField'}/>
-    <Regular> The <InlineCode> Text Field </InlineCode> wrapper component comes with two themes: light (default) and dark </Regular>
+    <Regular> The <InlineCode> Text Field </InlineCode> wrapper component comes with two themes: light (default) and dark. </Regular>
     
     <CodeBlock codeString={codeExample}
       />
@@ -80,6 +79,12 @@ const darkModeState = useSelector((state:RootState) => state.darkMode.value);
     </Regular>
     <Callout> Note: We do not recommend changing the <InlineCode>width</InlineCode> or <InlineCode>height</InlineCode>. The current dimensions are optimized to fill the canvas. The maximum height allowed is <InlineCode>5</InlineCode>. </Callout>
 
+    <Header text={'Position'}/>
+    <Regular> 
+      The <InlineCode> Position </InlineCode> prop allows the ability to change the X, Y, and Z properties of the Text Field. 
+      This prop accepts an Array of 3 values, <InlineCode>[X, Y, Z]</InlineCode>. By default the position is set to <InlineCode>[0,0,0]</InlineCode>.
+    </Regular>
+
     <Header text={'Background Color'}/>
     <Regular> 
       The default <InlineCode>backgroundColor</InlineCode> prop enables the ability to change the background color of the text field. 
@@ -103,7 +108,7 @@ const darkModeState = useSelector((state:RootState) => state.darkMode.value);
     </Regular>
 
     <Header text={'Code Sample'}/>
-    <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
+    <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/textfield-sandbox-c4hxyk?file=/src/App.js'></CodeBlock>
     </>
   )
 }

@@ -139,7 +139,7 @@ export default function SwitchDoc() {
       <Callout> Note: The value must be a number  </Callout>
 
       <Header text={'Code Sample'}/>
-      <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
+      <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/switch-sandbox-yvd2fm?file=/src/App.js'></CodeBlock>
     </>
   )
 }

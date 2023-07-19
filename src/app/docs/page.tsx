@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import Title from '../../../components/Title';
 import InstallIcon from 'public/install.svg'
@@ -7,6 +8,8 @@ import Callout from '../../../components/Callout'
 import CodeBlock from '../../../components/CodeBlock'
 import InlineCode from '../../../components/InlineCode'
 import BookIcon from 'public/book.svg'
+import BookIconWhite from 'public/book-white.svg'
+import { useSelector } from 'react-redux';
 import Link from 'next/link'
 
 
@@ -24,9 +27,11 @@ import { Switch } from 'r3dy'
   </div>
 </div>`
 
+const darkModeState = useSelector((state:RootState) => state.darkMode.value);
+
   return ( 
     <>
-    <Title title='Overview' icon={BookIcon} altTag='Overview Icon'/>
+    <Title title='Overview' icon={darkModeState ? BookIconWhite : BookIcon} altTag='Overview Icon'/>
     <Header text={'What is R3DY UI?'}/>
     <Regular>
       R3DY UI is a library of ready made 3D components built with <Link className='text-violet-500' href='https://docs.pmnd.rs/react-three-fiber/getting-started/introduction'>React Three Fiber</Link>.

@@ -21,8 +21,7 @@ import { Loader } from "r3dy";
 export default function App() {
   return (
       <Canvas>
-        <Loader theme="light" />
-        <Loader theme="dark" />
+        <Loader />
       </Canvas>
   );
 }`
@@ -134,6 +133,12 @@ export default function LoaderDoc() {
     <CodeBlock codeString='<Loader model={2} />'/>
     </Regular>
 
+    <Header text={'Position'}/>
+    <Regular> 
+      The <InlineCode> Position </InlineCode> prop allows the ability to change the X, Y, and Z properties of the Loader. 
+      This prop accepts an Array of 3 values, <InlineCode>[X, Y, Z]</InlineCode>. By default the position is set to <InlineCode>[0,0,0]</InlineCode>.
+    </Regular>
+
     {/* <Header text={'Code Sample'}/>
     <Regular> 
     Below is an example use of the 3D Loader component:
@@ -149,7 +154,7 @@ export default function LoaderDoc() {
       Note: You can directly import specific loader models like <InlineCode>HexagonLoader</InlineCode>, <InlineCode>ChipLoader</InlineCode>, and <InlineCode>MeshLoader</InlineCode> for additional customization options without supplying the <InlineCode>model</InlineCode> prop.
       </Callout>
       <Header text={'Code Sample'}/>
-      <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
+      <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/loader-sandbox-6y4znh'></CodeBlock>
     </>
   )
 }

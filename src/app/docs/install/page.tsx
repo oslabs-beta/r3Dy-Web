@@ -1,18 +1,21 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 import React from 'react'
 import Title from '../../../../components/Title'
 import InstallIcon from 'public/install.svg'
+import InstallIconWhite from 'public/install-white.svg';
 import Regular from '../../../../components/Regular'
 import Header from '../../../../components/Header'
 import Callout from '../../../../components/Callout'
 import CodeBlock from '../../../../components/CodeBlock'
 import InlineCode from '../../../../components/InlineCode'
+import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
 
 
 export default function Install() {
-
+  const darkModeState = useSelector((state:RootState) => state.darkMode.value);
   const implementationCode: string = `import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
   
@@ -26,7 +29,7 @@ import { Switch } from 'r3dy'
 
   return (
     <>
-    <Title title="Install" icon={InstallIcon} altTag='Install Icon'/>
+    <Title title="Install" icon={darkModeState ? InstallIconWhite : InstallIcon} altTag='Install Icon'/>
     <Header text={'NPM Package'}/>
     <CodeBlock codeString={'npm install r3dy'}></CodeBlock>
     <Header text={'Implementation'}/>
