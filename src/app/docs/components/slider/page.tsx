@@ -12,6 +12,7 @@ import InlineCode from '../../../../../components/InlineCode'
 import { Slider } from 'r3dy'
 import { Canvas } from '@react-three/fiber'
 import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/store'
 
 
 export default function SliderDoc() {
@@ -40,7 +41,7 @@ export default function SliderDoc() {
     )}`
 
     
-    const darkModeState = useSelector((state) => state.darkMode.value);
+    const darkModeState = useSelector((state: RootState) => state.darkMode.value);
   
   return (
     

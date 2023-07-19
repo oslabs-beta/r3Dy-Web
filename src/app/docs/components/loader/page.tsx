@@ -12,6 +12,7 @@ import InlineCode from '../../../../../components/InlineCode'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { Loader } from 'r3dy'
+import { RootState } from '../../../store/store'
 
 
 const example1: string  = 
@@ -56,7 +57,7 @@ export default function App() {
 
 export default function LoaderDoc() {
 
-  const darkModeState = useSelector((state) => state.darkMode.value);
+  const darkModeState = useSelector((state:RootState) => state.darkMode.value);
   return (
     <>
     <Title title={'Loader'} icon={darkModeState ? loaderWhite : loader} altTag={'Loader Icon'} />
@@ -95,21 +96,21 @@ export default function LoaderDoc() {
 
     <Header text={'Scale'}/>
     <Regular> 
-      By using the <InlineCode> scale </InlineCode> prop, you can enter numerical values that determine the model's size.
+      By using the <InlineCode> scale </InlineCode> prop, you can enter numerical values that determine the model&lsquo;s size.
     </Regular>
     <Header text={'Rotation Axis and Direction'}/>
     <Regular> 
-    Specify the model's rotation axis (x, y, or z) with the <InlineCode>rotationAxis</InlineCode> prop. Use the <InlineCode>rotationDirection</InlineCode>  prop to set the spin direction to either 'positive' or 'negative'.
+    Specify the model&lsquo;s rotation axis (x, y, or z) with the <InlineCode>rotationAxis</InlineCode> prop. Use the <InlineCode>rotationDirection</InlineCode>  prop to set the spin direction to either &#39;positive&#39; or &#39;negative&#39;.
     </Regular>
 
     <Header text={'Animation and Speed'}/>
     <Regular> 
-      Set the <InlineCode>easeAnimation </InlineCode> prop to true to enable a easing spinning animation. Control the model's rotation speed by inputting numerical values into the <InlineCode>speed</InlineCode> prop.
+      Set the <InlineCode>easeAnimation </InlineCode> prop to true to enable a easing spinning animation. Control the model&#39;s rotation speed by inputting numerical values into the <InlineCode>speed</InlineCode> prop.
     </Regular>
 
     <Header text={'Theme and Material'}/>
     <Regular> 
-    Change the model's default color and material with the <InlineCode>theme</InlineCode> prop by choosing either 'dark' or 'light'. For more customization, use the <InlineCode>material</InlineCode> prop to pass any ThreeJS material.
+    Change the model&#39;s default color and material with the <InlineCode>theme</InlineCode> prop by choosing either &#39;dark&#39; or &#39;light&#39;. For more customization, use the <InlineCode>material</InlineCode> prop to pass any ThreeJS material.
     </Regular>
 
     <Header text={'Wireframe and Matcap'}/>

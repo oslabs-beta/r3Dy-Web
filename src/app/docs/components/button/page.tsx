@@ -11,6 +11,7 @@ import Header from '../../../../../components/Header'
 import Regular from '../../../../../components/Regular'
 import InlineCode from '../../../../../components/InlineCode'
 import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/store'
 // Test example 
 
 const example: string = 
@@ -30,7 +31,7 @@ export default function App() {
 
 export default function ButtonDocs() {
 
-  const darkModeState = useSelector((state) => state.darkMode.value);
+  const darkModeState = useSelector((state:RootState) => state.darkMode.value);
 
   return (
     <>
