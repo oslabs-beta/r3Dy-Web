@@ -13,6 +13,17 @@ import { Slider } from 'r3dy'
 import { Canvas } from '@react-three/fiber'
 import { useSelector } from 'react-redux';
 
+const example: string = 
+`import { Canvas } from "@react-three/fiber";
+import { Slider } from "r3dy";
+
+export default function App() {
+  return (
+      <Canvas>
+        <Slider />
+      </Canvas>
+  );
+}`
 
 export default function SliderDoc() {
 
@@ -60,8 +71,8 @@ export default function SliderDoc() {
 
     <Regular> The <InlineCode> Slider </InlineCode> wrapper creates and renders a 3D interactive slder in a react application </Regular>
     
-    <CodeBlock codeString={codeString}
-      />
+    {/* <CodeBlock codeString={codeString}
+      /> */}
     <Callout>
       Note: The slider will always start from zero.
     </Callout>
@@ -88,6 +99,8 @@ export default function SliderDoc() {
       The <InlineCode>value</InlineCode> prop is used to show a visual number that corresponds with each position. Should be the output
       of the <InlineCode>onChange</InlineCode> prop.
     </Regular>
+    <Header text={'Code Sample'}/>
+    <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
     </>
   )
 }
