@@ -1,4 +1,5 @@
-## R3DY UI 
+![nav-logo](https://github.com/oslabs-beta/r3Dy-Web/assets/128100544/156979d0-6b52-4ffe-b184-3dc15dc3e012)
+## 
 
 R3DY UI is a component library that allows developers to import 3D components into their existing products. Typically, implementing 3D components requires extensive knowledge of a 3D library, however, with R3DY UI the process is streamlined and simple to understand. With this library, you will be able to import sliders, text fields, switches, buttons as well as loaders seamlessly and without any previous 3D experience. 
 
@@ -18,3 +19,13 @@ Once you've installed the npm package, its time to add a component to your proje
 However, there are a few things you will want to note. First - You want to make sure that you have imported the necessary dependencies. Import the desired component from r3dy as well as Canvas from @react-three/fiber. Afterward, you need to include the 'use client' at the top of the page. Now that you've included dependencies, wrap your component in a Canvas tag. Make sure to include shadows in the canvas tag or they will not show up.
 
   Note: As you can see, I have nested the Canvas in 2 divs. The first div is meant to contain the Canvas. By nature, Canvas will try to fill as much space as allowed. If it is not nested in a div and you have any sort of margin or padding, it will constantly expand to fit those margins. The second div is used to adjust the placement of the first. As mentioned, Canvas took up the entire space of the first div. Now that it's contained, you will need another to move it about the page.
+
+At this point you should be seeing a fully rendered 3D component! Now it's time to style. 
+
+To see more details on styling and how to adjust your component please head over to (R3DY.UI). You will find documentation that shows you how to alter colors, size, callbacks and more. 
+
+## Usage
+
+These components can be used on a wide variety of applications. We encourage any developer to play around with them and  to try different positions, sizes and colors. This will ensure that they integrate as seemlessly as possible with your application. 
+
+
