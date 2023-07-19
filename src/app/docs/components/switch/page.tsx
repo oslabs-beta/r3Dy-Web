@@ -12,6 +12,7 @@ import InlineCode from '../../../../../components/InlineCode'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
+import { RootState } from '../../../store/store'
 
 const example: string = 
 `import { Canvas } from "@react-three/fiber";
@@ -26,7 +27,7 @@ export default function App() {
 }`
 
 export default function SwitchDoc() {
-  const darkModeState = useSelector((state) => state.darkMode.value);
+  const darkModeState = useSelector((state: RootState) => state.darkMode.value);
   return (
     <>
     <Title title={'Switch'} icon={darkModeState ? toggleWhite : toggle} altTag={'Switch Icon'} />
@@ -52,7 +53,7 @@ export default function SwitchDoc() {
     <Regular> The <InlineCode> Color </InlineCode> prop allows you to change the color of the switch while maintaining its overall metal appearance. The color prop needs to be a string. </Regular>
     
     <CodeBlock codeString={'<Switch model={1} color={”red”} /> <Switch model={1} color={"#1B263B"} />'}></CodeBlock>
-    <Callout> Note: If you do not choose a color a default color will be applied for you. You may pass a string as a word ex:'red' or as hex code in quotes</Callout>
+    <Callout> Note: If you do not choose a color a default color will be applied for you. You may pass a string as a word ex:&aposred&apos or as hex code in quotes</Callout>
 
     <Header text={'Size Property'}/>
     <Regular> 
