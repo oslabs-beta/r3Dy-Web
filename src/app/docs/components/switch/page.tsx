@@ -14,6 +14,18 @@ import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
 import { RootState } from '../../../store/store'
 
+const example: string = 
+`import { Canvas } from "@react-three/fiber";
+import { Switch } from "r3dy";
+
+export default function App() {
+  return (
+      <Canvas>
+        <Switch />
+      </Canvas>
+  );
+}`
+
 export default function SwitchDoc() {
   const darkModeState = useSelector((state: RootState) => state.darkMode.value);
   return (
@@ -109,8 +121,9 @@ export default function SwitchDoc() {
     <Callout> Note: I would recommend using smaller numbers to adjust this property. The internal value is multiplied by whatever you input. So small changes can have a large effect. 
       The higher a number the faster and more precise the switch is. The smaller it is give it a softer bouncier feel. 
       Again this is optional, and it will default to predetermined values if you don’t enter anything. The default values were meant to simulate the most realistic feel.  </Callout>
-
-    
+      
+      <Header text={'Code Sample'}/>
+      <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
     </>
   )
 }

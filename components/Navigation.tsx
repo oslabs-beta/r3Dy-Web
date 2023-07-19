@@ -1,5 +1,5 @@
 'use client'
-import { RootState } from '../src/app/store';
+
 import React, { useState, useEffect } from 'react'
 // import { useSelector, useDispatch } from 'react-redux';
 import { store, useSelector } from '../src/app/store/store'
@@ -16,8 +16,8 @@ export default function Navigation() {
   const [componentDrop, setComponentDrop] = useState(false)
   const [darkMode, setDarkMode] = useState(false);
 
-  let dropdownActive: string = 'dark:darkmode-backround md:hidden flex flex-col z-20 ease-linear transition-all absolute duration-300 top-0 w-full bg-white border-b dark:border-none overflow-hidden drop-shadow-lg p-2 mt-[60px] max-h-full';
-  let dropdownInactive: string = 'dark:darkmode-backround md:hidden z-20 ease-linear transition-all absolute duration-300 top-0 w-full bg-white px-2 overflow-hidden mt-[60px] max-h-0';
+  let dropdownActive: string = 'dark:darkmode-backround md:hidden flex fixed flex-col z-20 ease-linear transition-all duration-300 top-0 w-full bg-white border-b dark:border-none overflow-hidden drop-shadow-lg p-2 mt-[60px] max-h-full';
+  let dropdownInactive: string = 'dark:darkmode-backround md:hidden z-20 fixed ease-linear transition-all duration-300 top-0 w-full bg-white px-2 overflow-hidden mt-[60px] max-h-0';
   
   const darkModeState = store.getState().darkMode.value;
 
@@ -48,20 +48,23 @@ export default function Navigation() {
       <nav className='md:px-8 z-20 fixed top-0 flex w-full align-middle py-2 px-4 justify-between border border-slate-200 bg-white dark:border-slate-700 bg-white dark:darkmode-backround'>
 
         {/* LOGO */}
-        <Link href='/' className='flex align-middle w-full'>
-          <Image width={130} height={32} src='/nav-logo.svg' alt='r3dy-logo-full' />
-        </Link>
+
+        <div className='flex items-center w-full'>
+          <Link href='/' >
+            <Image width={130} height={32} src={darkModeState ? '/footer-logo.svg' : '/nav-logo.svg'} alt='r3dy-logo-full' />
+          </Link>
+        </div>
 
         {/* DOCS & ABOUT US */}
         <div className='md:flex hidden w-full h-full items-center justify-center'>
           <Link href='/docs' className={(pathname.includes('/docs')) ? 'nav-link-active' : 'nav-link my-0'}> 
             <Image width={24} height={24} src={darkModeState ? '/book-white.svg' : '/book.svg'} alt='book-icon' className='mr-4' />
-            Docs
+            <p className='flex items-center'>Docs</p>
           </Link>
 
           <Link href='/about-us' className={(pathname.includes('/about-us')) ? 'nav-link-active' : 'nav-link'}>
             <Image width={24} height={24} src={darkModeState ? '/user-white.svg' : '/user.svg'} alt='person-icon' className='mr-4' />
-            About us
+            <p className='flex items-center'>About us</p>
           </Link>
         </div>
 

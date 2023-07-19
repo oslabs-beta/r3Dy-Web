@@ -14,6 +14,18 @@ import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
 import { RootState } from '../../../store/store'
 
+const example: string = 
+`import { Canvas } from "@react-three/fiber";
+import { TextField } from "r3dy";
+
+export default function App() {
+  return (
+      <Canvas>
+        <TextField />
+      </Canvas>
+  );
+}`
+
 export default function TextFieldDoc() {
 
 
@@ -90,6 +102,8 @@ const darkModeState = useSelector((state:RootState) => state.darkMode.value);
     Similarly to the <InlineCode>height</InlineCode> and <InlineCode>width</InlineCode> props, the <InlineCode>fontSize</InlineCode> represents the size and dimensions of the rendered 3D text on the canvas. The default fontSize is set to `1`.
     </Regular>
 
+    <Header text={'Code Sample'}/>
+    <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
     </>
   )
 }

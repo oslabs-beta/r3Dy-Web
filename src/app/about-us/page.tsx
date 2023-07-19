@@ -7,6 +7,7 @@ import NickPic from 'public/headshot-nick.png'
 import AlecPic from 'public/headshot-alec.png'
 import CorsoPic from 'public/headshot-corso.png'
 
+
 export default function About() {
   return (
     <>
@@ -30,7 +31,7 @@ export default function About() {
           R3DY UI allows any engineer to efficiently develop their 3D applications.
           </p>
           <div className="flex justify-center md:justify-start mt-8">
-            <iframe className='block' src="https://ghbtns.com/github-btn.html?user=oslabs-beta/r3Dy-Web&type=follow&count=true&size=large" width="300" height="30" title="GitHub"></iframe>
+            <iframe className='block' src="https://ghbtns.com/github-btn.html?user=oslabs-beta/r3Dy&type=follow&count=true&size=large" width="300" height="30" title="GitHub"></iframe>
           </div>
         </div>
         <div className='flex justify-center w-full'>
@@ -46,7 +47,7 @@ export default function About() {
         <Contributor name='Garrett Woo' title='Software Engineer' githubUrl='https://github.com/18gwoo' linkedinUrl='https://www.linkedin.com/in/garrett-woo/' />
         <Contributor src={NickPic} name='Nick King' title='Software Engineer' githubUrl='https://github.com/nrking913' linkedinUrl='http://www.linkedin.com/in/nick-king88' />
         <Contributor src={AlecPic} name='Alec Jessen' title='Software Engineer' githubUrl='https://github.com/alecjessen' linkedinUrl='https://www.linkedin.com/in/alecjessen/' />
-        <Contributor src={CorsoPic} name='Corso Rosati' title='Software Engineer' githubUrl='https://github.com/corsodr' linkedinUrl='https://www.linkedin.com/in/bryanltrang/' />
+        <Contributor src={CorsoPic} name='Corso Rosati' title='Software Engineer' githubUrl='https://github.com/corsodr' linkedinUrl='https://www.linkedin.com/in/corso-rosati/' />
       </div>
     </section>
 

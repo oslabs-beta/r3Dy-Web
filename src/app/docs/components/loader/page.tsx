@@ -14,6 +14,18 @@ import { Canvas } from '@react-three/fiber'
 import { Loader } from 'r3dy'
 import { RootState } from '../../../store/store'
 
+const example: string = 
+`import { Canvas } from "@react-three/fiber";
+import { Loader } from "r3dy";
+
+export default function App() {
+  return (
+      <Canvas>
+        <Loader theme="light" />
+        <Loader theme="dark" />
+      </Canvas>
+  );
+}`
 
 const example1: string  = 
 `<Loader theme="light" />
@@ -53,8 +65,6 @@ export default function App() {
   );
 }`
 
-
-
 export default function LoaderDoc() {
 
   const darkModeState = useSelector((state:RootState) => state.darkMode.value);
@@ -62,7 +72,7 @@ export default function LoaderDoc() {
     <>
     <Title title={'Loader'} icon={darkModeState ? loaderWhite : loader} altTag={'Loader Icon'} />
   
-    <div className='flex justify-around align-center py-7'>
+    <div className='flex flex-wrap justify-around align-center py-7'>
         <div className="w-64 h-64">
         <Canvas>
             <Loader model={1} color='lightblue' scale={1.03}/>
@@ -124,13 +134,13 @@ export default function LoaderDoc() {
     <CodeBlock codeString='<Loader model={2} />'/>
     </Regular>
 
-    <Header text={'Code Sample'}/>
+    {/* <Header text={'Code Sample'}/>
     <Regular> 
     Below is an example use of the 3D Loader component:
 
     <CodeBlock codeString={example2} />
 
-    </Regular>
+    </Regular> */}
 
     <Callout>
     Note: The easing animation feature is currently in an experimental phase, and it may behave unpredictably if rendered for a long time.
@@ -138,7 +148,8 @@ export default function LoaderDoc() {
       <Callout>
       Note: You can directly import specific loader models like <InlineCode>HexagonLoader</InlineCode>, <InlineCode>ChipLoader</InlineCode>, and <InlineCode>MeshLoader</InlineCode> for additional customization options without supplying the <InlineCode>model</InlineCode> prop.
       </Callout>
-
+      <Header text={'Code Sample'}/>
+      <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
     </>
   )
 }

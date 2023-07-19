@@ -10,23 +10,22 @@ import CodeBlock from '../../../../../components/CodeBlock'
 import Header from '../../../../../components/Header'
 import Regular from '../../../../../components/Regular'
 import InlineCode from '../../../../../components/InlineCode'
+
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store/store'
 // Test example 
+
 
 const example: string = 
 `import { Canvas } from "@react-three/fiber";
 import { Button } from "r3dy";
 
 export default function App() {
-
   return (
-    <div className="button">
       <Canvas>
-        <Button scale={2} color="green" handleClick={() => console.log("hello")} />
+        <Button />
       </Canvas>
-    </div>
-  )
+  );
 }`
 
 export default function ButtonDocs() {
@@ -73,7 +72,7 @@ export default function ButtonDocs() {
       The <InlineCode> handleClick </InlineCode> prop defines a callback function for the button’s onClick event. Set it by passing a function.
   </Regular>
   <Header text={'Code Sample'}/>
-  <CodeBlock codeString={example}></CodeBlock>
+  <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/button-sandbox-gg5hph'></CodeBlock>
     </>
   )
 }
