@@ -30,7 +30,7 @@ export default function Footer() {
                 <Link href='https://github.com/corsodr' target='_blank' className='text-[#F0F1F1] text-[14px] w-[90px] font-light py-2 hover:text-[#97a6ba]'>Corso Rosati</Link>
                 </div>
                 <div className='grow md:flex md:justify-end' >
-                    <Link href="https://github.com/oslabs-beta/r3Dy-Web" className="w-[40px] h-[40px] bg-[#415A77] hover:bg-[#4c6a8a] rounded-[100px] flex justify-center items-center " >
+                    <Link href="https://github.com/oslabs-beta/r3Dy" target='_blank' className="w-[40px] h-[40px] bg-[#415A77] hover:bg-[#4c6a8a] rounded-[100px] flex justify-center items-center " >
                     <Image alt="Footer Github Image" src={FooterGithub}/>
                     </Link>
                 </div>
