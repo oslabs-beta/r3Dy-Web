@@ -13,8 +13,7 @@ import { Switch } from 'r3dy'
 
 export default function Install() {
 
-  const implementationCode: string = `
-import { Canvas } from '@react-three/fiber'
+  const implementationCode: string = `import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
   
 <div className="flex justify-center">
