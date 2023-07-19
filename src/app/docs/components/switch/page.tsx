@@ -73,6 +73,14 @@ export default function SwitchDoc() {
 
     <Callout> Note: Please be aware of scope, and where you variables are, before passing in a function to be run.  </Callout>
 
+    <Header text={'Positioning'}/>
+
+    <Regular> 
+      The <InlineCode> Position </InlineCode> prop allows you to move the component around the canvas. There are 3 different props you can use.  <InlineCode> positionX</InlineCode>, <InlineCode> positionY </InlineCode> and <InlineCode> positionZ</InlineCode>
+    </Regular>
+    <CodeBlock codeString={'<Switch model={2} positionX={2} /><Switch model={2} positionY={3} positionZ={1} />'}></CodeBlock>
+    <Callout> Note: The value must be a number  </Callout>
+
 
     {/* ********************************************************************************************************************************* */}
     {/* ********************************************************************************************************************************* */}
@@ -83,10 +91,10 @@ export default function SwitchDoc() {
     <Regular> The slider switch is a more modern left to right thumb switch. It was modeled off of switches used in more modern electronics. This is model 2 </Regular>
 
     <Header text={'Color Property'}/>
-    <Regular> The <InlineCode> mainColor </InlineCode> and <InlineCode> slideColor </InlineCode> props allow you to customize both the body of the switch as well as the slide. 
+    <Regular> The <InlineCode> mainColor </InlineCode>, <InlineCode> slideColor </InlineCode>, <InlineCode> onColor </InlineCode> and <InlineCode> offColor </InlineCode> props allow you to customize the color of each part of the switch. 
     And just like the above color property you may use plain english for colors or hex code. Both properties need to be strings.  </Regular>
     
-    <CodeBlock codeString={'<Switch model={2} color={”red”} /> <Switch model={2} color={"#1B263B"} />'}></CodeBlock>
+    <CodeBlock codeString={'<Switch model={2} mainColor={”red”} onColor={"red"} /> <Switch model={2} slideColor={"#1B263B"} offColor={"blue"}/>'}></CodeBlock>
     <Callout> Note: If you do not choose any colors they will be applied for you. </Callout>
 
     <Header text={'Size Property'}/>
@@ -111,7 +119,7 @@ export default function SwitchDoc() {
 
     <Callout> Note: Please be aware of scope, and where you variables are, before passing in a function to be run.  </Callout>
 
-    <Header text={'Callback Function'}/>
+    <Header text={'Tension'}/>
     <Regular> 
       The <InlineCode> Tension </InlineCode> prop allows you to control the amount of ‘bounce’ the slider has when it is turned on or off. This must be a number greater than 0  
     </Regular>
@@ -122,6 +130,14 @@ export default function SwitchDoc() {
       The higher a number the faster and more precise the switch is. The smaller it is give it a softer bouncier feel. 
       Again this is optional, and it will default to predetermined values if you don’t enter anything. The default values were meant to simulate the most realistic feel.  </Callout>
       
+      <Header text={'Positioning'}/>
+
+      <Regular> 
+      The <InlineCode> Position </InlineCode> prop allows you to move the component around the canvas. There are 3 different props you can use.  <InlineCode> positionX</InlineCode>, <InlineCode> positionY </InlineCode> and <InlineCode> positionZ</InlineCode>
+      </Regular>
+      <CodeBlock codeString={'<Switch model={2} positionX={2} /><Switch model={2} positionY={3} positionZ={1} />'}></CodeBlock>
+      <Callout> Note: The value must be a number  </Callout>
+
       <Header text={'Code Sample'}/>
       <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/switch-sandbox-yvd2fm?file=/src/App.js'></CodeBlock>
     </>
