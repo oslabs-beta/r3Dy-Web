@@ -9,6 +9,7 @@ import LinkedinIconWhite from '../public/linkedin-white.svg'
 import Link from 'next/link'
 import { useSelector } from 'react-redux';
 import { store } from '../src/app/store/store'
+import { RootState } from '../src/app/store/store'
 
 type ContributorType = {
     src?: StaticImageData;
@@ -19,7 +20,7 @@ type ContributorType = {
 }
 
 export default function Contributor( {src, name, title, githubUrl, linkedinUrl}:ContributorType ) {
-  const darkModeState = useSelector((state) => state.darkMode.value);
+  const darkModeState = useSelector((state:RootState) => state.darkMode.value);
 
   return (
     <div className='flex items-center mb-[64px]'>

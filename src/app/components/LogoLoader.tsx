@@ -4,7 +4,15 @@ import React from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF, PerspectiveCamera, useMatcapTexture } from "@react-three/drei";
 import {MeshBasicMaterial, MeshDepthMaterial, MeshDistanceMaterial, MeshLambertMaterial, MeshMatcapMaterial, MeshNormalMaterial, MeshPhongMaterial, MeshPhysicalMaterial, MeshStandardMaterial, MeshToonMaterial, MeshBasicMaterialParameters, Material, Group } from "three";
-
+import { GLTF } from "three/examples/jsm/loaders/GLTFLoader"
+interface GLTFResult extends GLTF {
+  nodes: {
+    [nodeName: string]: THREE.Mesh;
+  };
+  materials: {
+    [materialName: string]: THREE.Material;
+  };
+}
 
 export default function Model(props) {
 
@@ -35,7 +43,7 @@ const materialInner = new MeshMatcapMaterial({matcap:matcap, color: '#3F37C9'})
 
 
 
-  const { nodes } = useGLTF("/r3dylogo.gltf");
+  const { nodes } = useGLTF("/r3dylogo.gltf") as GLTFResult;
   return (
     <group {...props} dispose={null}>
       <group scale={0.0095} rotation={[Math.PI/2, 0.002, 0.014]} ref={logo}>
