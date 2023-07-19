@@ -72,7 +72,7 @@ export default function ButtonDocs() {
       The <InlineCode> handleClick </InlineCode> prop defines a callback function for the button’s onClick event. Set it by passing a function.
   </Regular>
   <Header text={'Code Sample'}/>
-  <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/button-sandbox-gg5hph'></CodeBlock>
+  <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/button-sandbox-gg5hph?file=/src/App.js'></CodeBlock>
     </>
   )
 }
