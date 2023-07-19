@@ -100,7 +100,7 @@ export default function SliderDoc() {
       of the <InlineCode>onChange</InlineCode> prop.
     </Regular>
     <Header text={'Code Sample'}/>
-    <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
+    <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/slider-sandbox-cx3lty?file=/src/App.js'></CodeBlock>
     </>
   )
 }

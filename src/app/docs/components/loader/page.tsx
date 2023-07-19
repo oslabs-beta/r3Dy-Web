@@ -20,8 +20,7 @@ import { Loader } from "r3dy";
 export default function App() {
   return (
       <Canvas>
-        <Loader theme="light" />
-        <Loader theme="dark" />
+        <Loader />
       </Canvas>
   );
 }`
@@ -148,7 +147,7 @@ export default function LoaderDoc() {
       Note: You can directly import specific loader models like <InlineCode>HexagonLoader</InlineCode>, <InlineCode>ChipLoader</InlineCode>, and <InlineCode>MeshLoader</InlineCode> for additional customization options without supplying the <InlineCode>model</InlineCode> prop.
       </Callout>
       <Header text={'Code Sample'}/>
-      <CodeBlock codeString={example} enableSandbox={true} sandboxLink=''></CodeBlock>
+      <CodeBlock codeString={example} enableSandbox={true} sandboxLink='https://codesandbox.io/s/loader-sandbox-6y4znh'></CodeBlock>
     </>
   )
 }
