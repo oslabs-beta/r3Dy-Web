@@ -12,6 +12,7 @@ import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
+import { RootState } from '../../../store/store'
 
 const example: string = 
 `import { Canvas } from "@react-three/fiber";
@@ -31,7 +32,7 @@ export default function TextFieldDoc() {
   const codeExample: string = `<TextField theme=”light” />;
 <TextField theme=”dark”/>;`
 
-const darkModeState = useSelector((state) => state.darkMode.value);
+const darkModeState = useSelector((state:RootState) => state.darkMode.value);
   return (
     <>
     <Title title={'Text Field'} icon={darkModeState ? TextIconWhite : TextIcon} altTag={'Text Icon'} />
