@@ -5,13 +5,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useSelector } from 'react-redux';
 import { store } from '../src/app/store/store'
+import { RootState } from '../src/app/store/store'
 
 
 export default function DocsNavigation() {
     const [dropdown, setDropdown] = useState(false);
     const pathname: string = usePathname();
 
-    const darkModeState = useSelector((state) => state.darkMode.value);
+    const darkModeState = useSelector((state:RootState) => state.darkMode.value);
 
     return (
         <div className='md:flex hidden'>

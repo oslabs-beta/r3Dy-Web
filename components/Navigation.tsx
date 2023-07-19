@@ -8,14 +8,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
-
+declare const window: any;
 export default function Navigation() {
   const pathname = usePathname();
   const [dropdown, setDropdown] = useState(false)
   const [subDrop, setSubDrop] = useState(false)
   const [componentDrop, setComponentDrop] = useState(false)
   const [darkMode, setDarkMode] = useState(false);
-
+  
   let dropdownActive: string = 'dark:darkmode-backround md:hidden flex fixed flex-col z-20 ease-linear transition-all duration-300 top-0 w-full bg-white border-b dark:border-none overflow-hidden drop-shadow-lg p-2 mt-[60px] max-h-full';
   let dropdownInactive: string = 'dark:darkmode-backround md:hidden z-20 fixed ease-linear transition-all duration-300 top-0 w-full bg-white px-2 overflow-hidden mt-[60px] max-h-0';
   

@@ -8,7 +8,10 @@ import LinkedinIcon from '../public/linkedin.svg'
 import LinkedinIconWhite from '../public/linkedin-white.svg'
 import Link from 'next/link'
 import { useSelector } from 'react-redux';
-import { RootState } from '../src/app/store/store';
+
+import { store } from '../src/app/store/store'
+import { RootState } from '../src/app/store/store'
+
 
 type ContributorType = {
     src?: StaticImageData;
