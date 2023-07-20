@@ -9,10 +9,11 @@ import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
+import dynamic from 'next/dynamic'
 import { RootState } from '../../../../../src/app/store/store'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
-import { Switch } from 'r3dy'
+
 
 const example: string = 
 `import { Canvas } from "@react-three/fiber";
@@ -25,6 +26,11 @@ export default function App() {
       </Canvas>
   );
 }`
+
+const Switch = dynamic(
+  () => import('r3dy').then(mod => mod.Switch),
+  { ssr: false }
+)
 
 export default function SwitchDoc() {
   const darkModeState = useSelector((state: RootState) => state.darkMode.value);

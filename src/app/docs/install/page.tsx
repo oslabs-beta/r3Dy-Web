@@ -11,8 +11,13 @@ import CodeBlock from '../../../../components/CodeBlock'
 import InlineCode from '../../../../components/InlineCode'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
-import { Switch } from 'r3dy'
 import { RootState } from '../../../../src/app/store/store'
+import dynamic from 'next/dynamic'
+
+const Switch = dynamic(
+  () => import('r3dy').then(mod => mod.Switch),
+  { ssr: false }
+)
 
 
 export default function Install() {

@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react'
+import dynamic from 'next/dynamic'
 import TextIcon from 'public/text.svg'
 import TextIconWhite from 'public/text-white.svg'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
-import { TextField } from 'r3dy'
 import Title from '../../../../../components/Title'
 import Regular from '../../../../../components/Regular'
 import Header from '../../../../../components/Header'
@@ -13,7 +13,10 @@ import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
 import { RootState } from '../../../store/store'
-
+const TextField = dynamic(
+  () => import('r3dy').then(mod => mod.TextField),
+  { ssr: false }
+)
 const example: string = 
 `import { Canvas } from "@react-three/fiber";
 import { TextField } from "r3dy";

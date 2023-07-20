@@ -9,7 +9,7 @@ import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
-import { Slider } from 'r3dy'
+import dynamic from 'next/dynamic'
 import { Canvas } from '@react-three/fiber'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store/store'
@@ -25,6 +25,11 @@ export default function App() {
       </Canvas>
   );
 }`
+
+const Slider = dynamic(
+  () => import('r3dy').then(mod => mod.Slider),
+  { ssr: false }
+)
 
 export default function SliderDoc() {
 

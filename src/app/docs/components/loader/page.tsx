@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import dynamic from 'next/dynamic';
 import loader from 'public/loader.svg'
 import loaderWhite from 'public/loader-white.svg'
 import Title from '../../../../../components/Title'
@@ -11,9 +12,11 @@ import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
-import { Loader } from 'r3dy'
 import { RootState } from '../../../store/store'
-
+const Loader = dynamic(
+  () => import('r3dy').then(mod => mod.Loader),
+  { ssr: false }
+)
 const example: string = 
 `import { Canvas } from "@react-three/fiber";
 import { Loader } from "r3dy";

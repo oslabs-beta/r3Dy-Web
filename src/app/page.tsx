@@ -1,13 +1,20 @@
 'use client';
+
+import dynamic from 'next/dynamic'
 import {useState, useEffect } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSelector, useDispatch } from 'react-redux'
 import { Canvas } from '@react-three/fiber';
 import { MeshBasicMaterial, MeshStandardMaterial, MeshMatcapMaterial} from 'three';
-import { Loader, Switch, Slider, TextField, Button } from 'r3dy';
 import Footer from '../../components/Footer';
 import { RootState } from './store/store'
+
+const Loader = dynamic(
+  () => import('r3dy').then(mod => mod.Loader),
+  { ssr: false }
+)
+
 export default function Home() {
     const [planeColor, setPlaneColor] = useState('#DDDFE1');
 
@@ -17,24 +24,6 @@ export default function Home() {
 
   const darkModeState = useSelector((state: RootState) => state.darkMode.value); // current redux store state
 
-
-  useEffect(() => {
-    const observer = new MutationObserver((mutationsList) => {
-        for(let mutation of mutationsList) {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                if (document.body.classList.contains('dark')) {
-                    setPlaneColor('green');
-                } else {
-                    setPlaneColor('#DDDFE1');
-                }
-            }
-        }
-    });
-
-    observer.observe(document.body, { attributes: true });
-
-    return () => observer.disconnect();
-}, []);
 
 
   return (
