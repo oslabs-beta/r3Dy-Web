@@ -33,8 +33,8 @@ export default function App() {
 export default function TextFieldDoc() {
 
 
-  const codeExample: string = `<TextField theme=”light” />;
-<TextField theme=”dark”/>;`
+  const codeExample: string = `<TextField theme="light" />;
+<TextField theme="dark"/>;`
 
 const darkModeState = useSelector((state:RootState) => state.darkMode.value);
   return (

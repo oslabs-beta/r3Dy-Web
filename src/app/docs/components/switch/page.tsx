@@ -58,7 +58,7 @@ export default function SwitchDoc() {
     <Header text={'Color Property'}/>
     <Regular> The <InlineCode> Color </InlineCode> prop allows you to change the color of the switch while maintaining its overall metal appearance. The color prop needs to be a string. </Regular>
     
-    <CodeBlock codeString={'<Switch model={2} color={”red”} /> <Switch model={2} color={"#1B263B"} />'}></CodeBlock>
+    <CodeBlock codeString={'<Switch model={2} color={"red"} /> <Switch model={2} color={"#1B263B"} />'}></CodeBlock>
     <Callout> Note: If you do not choose a color a default color will be applied for you. You may pass a string as a word ex: &#39;red&#39; or as hex code in quotes</Callout>
 
     <Header text={'Size Property'}/>
@@ -75,7 +75,7 @@ export default function SwitchDoc() {
       The <InlineCode> Callback </InlineCode> prop allows you to pass in a function that will be called when the switch is in its on position. You can pass in any type of function you like. When the switch is down or ‘on’ then the callback function will be run.  
     </Regular>
 
-    <CodeBlock codeString={'<Switch model={2} callback={() => {console.log(`hello`)}} /> <Switch model={2} callback={() => {counter ++ }} />'}></CodeBlock>
+    <CodeBlock codeString={'<Switch model={2} callback={() => {console.log(`hello`)}} /> <Switch model={2} callback={() => { counter++ }} />'}></CodeBlock>
 
     <Callout> Note: Please be aware of scope, and where you variables are, before passing in a function to be run.  </Callout>
 

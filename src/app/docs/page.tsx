@@ -23,7 +23,7 @@ import { Switch } from 'r3dy'
 <div className="flex justify-center">
   <div className='h-[200px] w-[300px] '>
     <Canvas shadows>
-      <TextField theme=”light” />
+      <TextField theme="light" />
     </Canvas>
   </div>
 </div>`
