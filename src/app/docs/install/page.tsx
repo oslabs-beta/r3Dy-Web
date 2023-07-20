@@ -15,7 +15,7 @@ import { RootState } from '../../../../src/app/store/store'
 import dynamic from 'next/dynamic'
 
 const Switch = dynamic(
-  () => import('r3dynew').then(mod => mod.Switch),
+  () => import('r3dy').then(mod => mod.Switch),
   { ssr: false }
 )
 
