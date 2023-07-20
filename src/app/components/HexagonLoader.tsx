@@ -1,8 +1,7 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF, PerspectiveCamera, useMatcapTexture } from "@react-three/drei";
-import { MeshBasicMaterial, MeshToonMaterial, MeshMatcapMaterial} from "three";
-
+import { MeshBasicMaterial, MeshToonMaterial, MeshMatcapMaterial, Group, } from "three";
 
 
 type LoaderProps = {
@@ -19,8 +18,8 @@ type LoaderProps = {
 
 export default function HexagonLoader( props: LoaderProps ) {
   // color, material, speed, scale//100
-const scale: number = props.scale/85 || 0.01
-const loader = useRef();
+const scale: number = props.scale ? props.scale/85 : 0.01
+const loader = React.useRef<Group>(null);
 const material = props.material || MeshMatcapMaterial
 const speed: number = props.speed || 5
 const rotationAxis: string = props.rotationAxis || 'y'
@@ -45,24 +44,30 @@ const materialAll = new material({color: color, wireframe: wireframe, matcap: ma
 
 // animation logic
 useFrame((state, delta) => {
+  const rotationSpeed: number = fancyAnimation ? Math.abs(Math.sin(state.clock.elapsedTime) / Math.PI) - (0.0004 * state.clock.elapsedTime) : 1;
 
-  const rotationSpeed: number = fancyAnimation ? Math.abs(Math.sin(state.clock.elapsedTime)/Math.PI) - (0.0004 * state.clock.elapsedTime) : 1
+  if (loader.current) {
+    if (rotationAxis === "x" || rotationAxis === "y" || rotationAxis === "z") {
+      let rotationAxisValue: "x" | "y" | "z" = rotationAxis;
+      
+      if (rotationDirection === 'negative' && fancyAnimation) {
+        loader.current.rotation[rotationAxisValue] += delta * rotationSpeed * -speed;
+      } else if (rotationDirection === 'positive' && fancyAnimation) {
+        loader.current.rotation[rotationAxisValue] += delta * rotationSpeed * speed;
+      }
 
-  if (rotationDirection === 'negative' && fancyAnimation) {
-    loader.current.rotation[rotationAxis] += delta * rotationSpeed * -speed
-   } else if (rotationDirection === 'positive' && fancyAnimation){
-    loader.current.rotation[rotationAxis] += delta * rotationSpeed * speed
-   }
-
-  if (rotationDirection === 'negative' && !fancyAnimation) {
-   loader.current.rotation[rotationAxis] += (delta * rotationSpeed * -speed)/Math.PI
-  } else if (rotationDirection === 'positive' && !fancyAnimation){
-   loader.current.rotation[rotationAxis] += (delta * rotationSpeed * speed)/Math.PI
+      if (rotationDirection === 'negative' && !fancyAnimation) {
+        loader.current.rotation[rotationAxisValue] += (delta * rotationSpeed * -speed) / Math.PI;
+      } else if (rotationDirection === 'positive' && !fancyAnimation) {
+        loader.current.rotation[rotationAxisValue] += (delta * rotationSpeed * speed) / Math.PI;
+      }
+    }
   }
-})
+});
 
 
-  const { nodes } = useGLTF("/loader.gltf");
+
+  const { nodes } = useGLTF("/loader.gltf") as any;
   return (
       <group scale={scale} ref={loader}>
         <ambientLight />

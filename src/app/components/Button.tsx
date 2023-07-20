@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import { RoundedBox, Text, OrbitControls, useHelper } from "@react-three/drei"
 import * as THREE from 'three'
  
-export default function Button(props) {
+export default function Button(props: any) {
     const [hover, setHover] = useState(false);
     
     const scale = props.scale || 1;
