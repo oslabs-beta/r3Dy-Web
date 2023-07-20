@@ -15,7 +15,7 @@ import { RootState } from '../../../../src/app/store/store'
 import dynamic from 'next/dynamic'
 
 const Switch = dynamic(
-  () => import('r3dy').then(mod => mod.Switch),
+  () => import('r3dynew').then(mod => mod.Switch),
   { ssr: false }
 )
 
@@ -41,7 +41,7 @@ import { Switch } from 'r3dy'
     <Header text={'Implementation'}/>
     <Regular> Once you've installed the npm package, its time to add a component to your project. In the code snippet below, you can see how this is implemented.  </Regular>
     <CodeBlock codeString={implementationCode}></CodeBlock>
-    <Callout> Note: As you can see, the above code generated the switch below it. However there are a few things you want to make note of.  </Callout>
+    <Callout> As you can see, the above code generated the switch below it. However there are a few things you want to make note of. </Callout>
     <div className="flex justify-center">
       <div className='h-[200px] w-[300px] '>
         <Canvas shadows>
@@ -50,10 +50,9 @@ import { Switch } from 'r3dy'
       </div>
     </div>
     <Regular> 
-      First - You want to make sure you have imported the necessary dependencies. Import the desired component from <InlineCode> r3dy </InlineCode> as well as <InlineCode> Canvas </InlineCode> from <InlineCode> @react-three/fiber </InlineCode>.
-      Afterwards you need to include the <InlineCode> use client </InlineCode> at the top of the page. Now that you've included the dependencies, wrap your component in a <InlineCode> Canvas </InlineCode> tag. Make sure to include <InlineCode> shadows </InlineCode> in the canvas tag or they will not show up. 
+    You want to make sure that you have imported the necessary dependencies. Import the desired component from <InlineCode> r3dy </InlineCode> as well as <InlineCode>Canvas</InlineCode> from from <InlineCode>@react-three/fiber.</InlineCode> Now that you've included dependencies, wrap your component in a <InlineCode>Canvas</InlineCode> tag. Make sure to include shadows in the <InlineCode>Canvas</InlineCode> tag or they will not show up.
        </Regular>
-       <Callout> Note: As you can see, Ive nested the <InlineCode> Canvas </InlineCode> in 2 divs. The first div is meant to contain the <InlineCode> Canvas </InlineCode>. By nature <InlineCode> Canvas </InlineCode> will try to fill as much space as its allowed, so if you dont nest it in a div, and you have margins, it will constantly expand to fit those margins.
+       <Callout> Note: As you can see, the <InlineCode> Canvas </InlineCode> is nested in 2 divs. The first div is meant to contain the <InlineCode> Canvas </InlineCode>. By nature <InlineCode> Canvas </InlineCode> will try to fill as much space as its allowed, so if you dont nest it in a div, and you have margins, it will constantly expand to fit those margins.
        The second div is used to adjust the placement of the first. As mentioned, <InlineCode> Canvas </InlineCode> took up the entire space of the first div. Now that its contained, you will need another to move it about the page. 
           </Callout>
           <Header text={'Customization'}/>
