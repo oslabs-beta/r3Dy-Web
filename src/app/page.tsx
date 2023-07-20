@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <>
-    <section className='basic-transition flex h-full w-full align-center justify-center md:py-36 py-16 md:px-8 overflow-hidden dark:darkmode-background'>
+    <section className='basic-transition flex h-screen w-full align-center justify-center md:py-36 py-16 md:px-8 overflow-hidden dark:darkmode-background'>
       <div className="w-full md:flex justify-center block md:pr-8 p-4 z-10">
         <div className="p-4 max-w-[1024px]">
           <div className='flex justify-center md:justify-start'>
