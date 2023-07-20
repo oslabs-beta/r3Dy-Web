@@ -36,12 +36,12 @@ const darkModeState = useSelector((state:RootState) => state.darkMode.value);
   return (
     <>
     <Title title={'Text Field'} icon={darkModeState ? TextIconWhite : TextIcon} altTag={'Text Icon'} />
-    <div className='h-[300px]'>
+    <div className='h-[150px] md:h-[300px]'>
       <Canvas shadows> 
         <TextField/>
       </Canvas>
     </div>
-    <div className='h-[300px]'>
+    <div className='h-[150px] md:h-[300px]'>
       <Canvas shadows> 
         <TextField theme='dark'/>
       </Canvas>
