@@ -13,8 +13,9 @@ import InlineCode from '../../../../../components/InlineCode'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { RootState } from '../../../store/store'
+
 const Loader = dynamic(
-  () => import('r3dy').then(mod => mod.Loader),
+  () => import('r3dynew').then(mod => mod.Loader),
   { ssr: false }
 )
 const example: string = 
@@ -127,7 +128,7 @@ export default function LoaderDoc() {
 
     <Header text={'Wireframe and Matcap'}/>
     <Regular> 
-    The <InlineCode>wireframe</InlineCode> prop, when set to true, enables wireframe rendering for the model (If applicable). Use the <InlineCode>matcapIndex</InlineCode> and <InlineCode>matcapSize</InlineCode> props to apply matcaps with the <InlineCode>useMatcapTexture</InlineCode> function from React-Three-Drei.
+    The <InlineCode>wireframe</InlineCode> prop, when set to true, enables wireframe rendering for the model (If applicable). Use the <InlineCode>matcapIndex</InlineCode> and <InlineCode>matcapSize</InlineCode> props to apply matcaps with the <a href="https://github.com/pmndrs/drei#usematcaptexture" target='_blank'><InlineCode>useMatcapTexture</InlineCode></a> function from React-Three-Drei.
     </Regular>
 
     <Header text={'Loader Type'}/>

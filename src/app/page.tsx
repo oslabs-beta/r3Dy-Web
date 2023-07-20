@@ -11,15 +11,20 @@ import Footer from '../../components/Footer';
 import { RootState } from './store/store'
 
 const Loader = dynamic(
-  () => import('r3dy').then(mod => mod.Loader),
+  () => import('r3dynew').then(mod => mod.Loader),
   { ssr: false }
 )
 
 export default function Home() {
-    const [planeColor, setPlaneColor] = useState('#DDDFE1');
+    
+    const [copied, setCopied] = useState(false)
 
   const copyClipboard = (): void => {
     navigator.clipboard.writeText('npm install r3dy');
+    setCopied(true);
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000);
   };
 
   const darkModeState = useSelector((state: RootState) => state.darkMode.value); // current redux store state
@@ -28,7 +33,7 @@ export default function Home() {
 
   return (
     <>
-    <section className='basic-transition flex h-full w-full align-center justify-center md:py-36 py-16 md:px-8 overflow-hidden dark:darkmode-backround'>
+    <section className='basic-transition flex h-full w-full align-center justify-center md:py-36 py-16 md:px-8 overflow-hidden dark:darkmode-background'>
       <div className="w-full md:flex justify-center block md:pr-8 p-4 z-10">
         <div className="p-4 max-w-[1024px]">
           <div className='flex justify-center md:justify-start'>
@@ -37,6 +42,9 @@ export default function Home() {
           <h1 id='main-header' className="basic-transition text-5xl font-black text-center md:text-left mb-8">Interactive 3D React UI components.</h1>
           <p id='landing-text' className="basic-transition text-[#415A77] text-base font-medium leading-normal text-center md:text-left dark:text-slate-50">R3DY UI is a growing suite of 3D components, built to help take your existing 2D projects into 3D.</p>
           <div className="md:my-8 mt-8 md:block flex flex-col items-center">
+            {copied && <div id='breadcrumb' className='basic-transition p-2 text-white text-sm font-medium bg-teal-600 absolute rounded-md my-[-50px]'>
+              Copied!
+            </div>}
             <button className="font-mono flex items-center py-2 px-4 bg-slate-200 rounded-md text-sm mb-7 ease-linear transition duration-150 hover:bg-slate-300" onClick={copyClipboard}>
               npm install r3dy 
               <Image src={'/copy.svg'} alt='copy-icon' width={15} height={5} className='ml-2'/>
@@ -46,7 +54,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="md:w-[512px] md:h-[512px] w-full h-[250px] ">
+        <div className="md:w-[512px] md:h-[512px] w-full h-[250px]">
           <Canvas>
             <Loader color={darkModeState ? 'white' : 'purple'} matcapIndex={40} rotationAxis='x'/>
           </Canvas> 

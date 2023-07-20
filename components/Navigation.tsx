@@ -16,8 +16,8 @@ export default function Navigation() {
   const [componentDrop, setComponentDrop] = useState(false)
   const [darkMode, setDarkMode] = useState(false);
   
-  let dropdownActive: string = 'dark:darkmode-backround md:hidden flex fixed flex-col z-20 ease-linear transition-all duration-300 top-0 w-full bg-white border-b dark:border-none overflow-hidden drop-shadow-lg p-2 mt-[60px] max-h-full';
-  let dropdownInactive: string = 'dark:darkmode-backround md:hidden z-20 fixed ease-linear transition-all duration-300 top-0 w-full bg-white px-2 overflow-hidden mt-[60px] max-h-0';
+  let dropdownActive: string = 'dark:darkmode-background md:hidden flex fixed flex-col z-20 ease-linear transition-all duration-300 top-0 w-full bg-white border-b dark:border-none overflow-hidden drop-shadow-lg p-2 mt-[60px] max-h-full';
+  let dropdownInactive: string = 'dark:darkmode-background md:hidden z-20 fixed ease-linear transition-all duration-300 top-0 w-full bg-white px-2 overflow-hidden mt-[60px] max-h-0';
   
   const darkModeState = store.getState().darkMode.value;
 
@@ -45,7 +45,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className='md:px-8 z-20 fixed top-0 flex w-full align-middle py-2 px-4 justify-between border border-slate-200 bg-white dark:border-slate-700 bg-white dark:darkmode-backround'>
+      <nav className='md:px-8 z-20 fixed top-0 flex w-full align-middle py-2 px-4 justify-between border border-slate-200 bg-white dark:border-slate-700 bg-white dark:darkmode-background'>
 
         {/* LOGO */}
 
