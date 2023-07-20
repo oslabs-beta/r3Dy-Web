@@ -47,6 +47,10 @@ export default function ButtonDocs() {
     <Regular> 
       The <InlineCode> scale </InlineCode> prop defines the button size. Change it by passing a number.
   </Regular>
+  <Header text={'Position'}/>
+    <Regular> 
+      The <InlineCode> position </InlineCode> prop defines the button position. Change it by passing X, Y, Z coordinates as an array of numbers. 
+  </Regular>
   <Header text={'Color'}/>
     <Regular> 
       The <InlineCode> color </InlineCode> prop defines the button color. Change it by passing a color name or hex code as a string.
@@ -58,6 +62,10 @@ export default function ButtonDocs() {
   <Header text={'Text'}/>
     <Regular> 
     The <InlineCode> text </InlineCode> prop defines the button text. Change it by passing a string.
+  </Regular>
+  <Header text={'Font'}/>
+    <Regular> 
+    The <InlineCode> font </InlineCode> prop defines the font of the button text. Change it by passing a file path as a string.
   </Regular>
   <Header text={'Font Size'}/>
     <Regular> 
