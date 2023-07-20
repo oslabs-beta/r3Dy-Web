@@ -15,8 +15,8 @@ export default function DocsNavigation() {
     const darkModeState = useSelector((state:RootState) => state.darkMode.value);
 
     return (
-        <div className='md:flex hidden'>
-            <nav className="fixed basic-transition w-[250px] h-screen flex px-4 py-10 flex-column border-x border-slate-200 bg-white dark:darkmode-background dark:border-slate-700">
+        <div className='md:flex h-screen hidden'>
+            <nav className="basic-transition w-[250px] flex px-4 py-10 flex-column border-x border-slate-200 bg-white dark:darkmode-background dark:border-slate-700">
                 <div className='grow'>
                     <div className="py-2 px-4 rounded-md bg-slate-100 mb-8 max-w-[150px] text-sm dark:text-white dark:bg-slate-700">R3DY v1.0</div>
                     <Link href='/docs' className={(pathname === '/docs') ? 'doc-link-active' : 'doc-link'}>
