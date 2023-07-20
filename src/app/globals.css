@@ -97,7 +97,7 @@ line-height: normal;
   .basic-transition {
     @apply ease-linear transition duration-150;
   }
-  .darkmode-backround {
+  .darkmode-background {
     @apply bg-[#0D1B2A];
   }
   .darkmode-text {

@@ -26,7 +26,7 @@
     "leva": "^0.9.35",
     "next": "13.4.7",
     "postcss": "8.4.24",
-    "r3dynew": "^1.0.7",
+    "r3dy": "^1.1.0",
     "react": "18.2.0",
     "react-code-blocks": "^0.1.0",
     "react-dom": "18.2.0",

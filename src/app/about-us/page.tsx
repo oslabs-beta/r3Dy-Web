@@ -13,7 +13,7 @@ import CorsoPic from 'public/headshot-corso.png'
 export default function About() {
   return (
     <>
-    <section className='basic-transition py-16 md:py-28 px-8 flex justify-center dark:darkmode-backround'> 
+    <section className='basic-transition py-16 md:py-28 px-8 flex justify-center dark:darkmode-background'> 
       {/* HERO */}
       <div className='flex justify-center flex-col max-w-screen-lg'>
       <h1 id='project-contributors' className='basic-transition text-5xl mb-8 text-center' >Just about R3DY</h1>
@@ -22,7 +22,7 @@ export default function About() {
     </section>
 
     {/* STORY */}
-    <section className='basic-transition py-16 md:py-28 px-8 flex justify-center border-t dark:border-slate-700 dark:darkmode-backround'>
+    <section className='basic-transition py-16 md:py-28 px-8 flex justify-center border-t dark:border-slate-700 dark:darkmode-background'>
       <div className='flex md:flex-row flex-col max-w-3xl content-center w-full text-center md:text-left'>
         <div className='md:pr-8'>
           <h2 className='basic-transition text-indigo-700 text-2xl font-extrabold mb-4 dark:text-white'>Our Story</h2>
@@ -36,7 +36,7 @@ export default function About() {
           Check us out!
           </p>
           <div className="flex justify-center md:justify-start mt-8">
-            <iframe className='block' src="https://ghbtns.com/github-btn.html?user=oslabs-beta/r3Dy&type=follow&count=true&size=large" width="300" height="30" title="GitHub"></iframe>
+            <iframe className='block' src="https://ghbtns.com/github-btn.html?user=oslabs-beta/r3Dy&type=follow&count=true&size=large" width="250" height="30" title="GitHub"></iframe>
           </div>
         </div>
         <div className='flex justify-center w-full'>
@@ -46,7 +46,7 @@ export default function About() {
     </section>
 
       {/* CONTRIBUTORS */}
-    <section className='basic-transition flex justify-center pb-20 border-t py-16 md:py-28 dark:border-slate-700 dark:darkmode-backround'>
+    <section className='basic-transition flex justify-center pb-20 border-t py-16 md:py-28 dark:border-slate-700 dark:darkmode-background'>
       <div className='md:flex md:flex-wrap md:justify-center block max-w-5xl'>
         <Contributor src={BryanPic} name='Bryan Trang' title='Software Engineer' githubUrl='https://github.com/bryanltrang' linkedinUrl='https://www.linkedin.com/in/bryanltrang/' />
         <Contributor name='Garrett Woo' title='Software Engineer' githubUrl='https://github.com/18gwoo' linkedinUrl='https://www.linkedin.com/in/garrett-woo/' />

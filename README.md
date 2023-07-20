@@ -1,12 +1,12 @@
 <br/>
 <div align="center">
-  <a href="www.r3dyui.com">
+  <a href="https://www.r3dyui.com/">
     <img src="https://i.imgur.com/mXk9ke7.jpeg" height="350" align="center" alt="header" />
   </a>
   <br/>
   <br/>
 
-[![Documentation](https://img.shields.io/badge/Read%20our%20Documentation-black?logo=book)](www.r3dyui.com/docs)
+[![Documentation](https://img.shields.io/badge/Read%20our%20Documentation-black?logo=book)](https://www.r3dyui.com/docs/)
 
 </div>
 
@@ -15,4 +15,4 @@
 
 
 ## Documentation
-Our full documentation can be found [here](www.r3dyui.com/docs).
+Our full documentation can be found [here](https://www.r3dyui.com/docs/).
