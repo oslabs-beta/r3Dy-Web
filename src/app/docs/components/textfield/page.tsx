@@ -15,7 +15,7 @@ import InlineCode from '../../../../../components/InlineCode'
 import { RootState } from '../../../store/store'
 
 const TextField = dynamic(
-  () => import('r3dynew').then(mod => mod.TextField),
+  () => import('r3dy').then(mod => mod.TextField),
   { ssr: false }
 )
 const example: string = 

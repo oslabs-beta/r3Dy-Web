@@ -28,7 +28,7 @@ export default function App() {
 }`
 
 const Switch = dynamic(
-  () => import('r3dynew').then(mod => mod.Switch),
+  () => import('r3dy').then(mod => mod.Switch),
   { ssr: false }
 )
 
