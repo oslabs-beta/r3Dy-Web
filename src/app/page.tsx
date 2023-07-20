@@ -11,7 +11,7 @@ import Footer from '../../components/Footer';
 import { RootState } from './store/store'
 
 const Loader = dynamic(
-  () => import('r3dynew').then(mod => mod.Loader),
+  () => import('r3dy').then(mod => mod.Loader),
   { ssr: false }
 )
 

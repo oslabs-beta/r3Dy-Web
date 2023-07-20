@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import Image from 'next/image';
 import Title from '../../../components/Title';
 import InstallIcon from 'public/install.svg'
 import Regular from '../../../components/Regular'
@@ -23,7 +24,7 @@ import { Switch } from 'r3dy'
 <div className="flex justify-center">
   <div className='h-[200px] w-[300px] '>
     <Canvas shadows>
-      <TextField theme=”light” />
+      <TextField theme="light" />
     </Canvas>
   </div>
 </div>`
@@ -33,6 +34,9 @@ const darkModeState = useSelector((state: RootState) => state.darkMode.value);
   return ( 
     <>
     <Title title='Overview' icon={darkModeState ? BookIconWhite : BookIcon} altTag='Overview Icon'/>
+    <div className='flex justify-center pb-20 pt-10'>
+    <Image className='mt-16 md:mt-0' src='../r3dy-logo-ring.svg' width={232} height={232} alt='About Us Logo'/>
+    </div>
     <Header text={'What is R3DY UI?'}/>
     <Regular>
       R3DY UI is a library of ready made 3D components built with <Link className='text-violet-500' href='https://docs.pmnd.rs/react-three-fiber/getting-started/introduction'>React Three Fiber</Link>.
@@ -54,7 +58,6 @@ const darkModeState = useSelector((state: RootState) => state.darkMode.value);
     <Regular>
       If you like what we are doing here and want to contribute, or give us feedback, feel free to check us out on <Link className='text-violet-500' href={'https://github.com/oslabs-beta/r3Dy'}>Github!</ Link>
     </Regular>
-
     </>
   )
 }

@@ -27,7 +27,7 @@ export default function App() {
 }`
 
 const Slider = dynamic(
-  () => import('r3dynew').then(mod => mod.Slider),
+  () => import('r3dy').then(mod => mod.Slider),
   { ssr: false }
 )
 
@@ -75,7 +75,7 @@ export default function SliderDoc() {
     </Regular>
     <Header text={'Slider'}/>
 
-    <Regular> The <InlineCode> Slider </InlineCode> wrapper creates and renders a 3D interactive slder in a react application </Regular>
+    <Regular> The <InlineCode> Slider </InlineCode> wrapper creates and renders a 3D interactive slider in a react application </Regular>
     
     {/* <CodeBlock codeString={codeString}
       /> */}
@@ -91,7 +91,7 @@ export default function SliderDoc() {
 
     <Header text={'steps (optional):'}/>
     <Regular> 
-      The <InlineCode> steps </InlineCode> prop sets the increment of each tick/mark. If you want the sluder to be in increments of 3, then steps would be 3. Defaults to 2.
+      The <InlineCode> steps </InlineCode> prop sets the increment of each tick/mark. If you want the slider to be in increments of 3, then steps would be 3. Defaults to 2.
     </Regular>
 
     <Header text={'onChange (required):'}/>

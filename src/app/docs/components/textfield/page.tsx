@@ -15,7 +15,7 @@ import InlineCode from '../../../../../components/InlineCode'
 import { RootState } from '../../../store/store'
 
 const TextField = dynamic(
-  () => import('r3dynew').then(mod => mod.TextField),
+  () => import('r3dy').then(mod => mod.TextField),
   { ssr: false }
 )
 const example: string = 
@@ -33,8 +33,8 @@ export default function App() {
 export default function TextFieldDoc() {
 
 
-  const codeExample: string = `<TextField theme=”light” />;
-<TextField theme=”dark”/>;`
+  const codeExample: string = `<TextField theme="light" />;
+<TextField theme="dark"/>;`
 
 const darkModeState = useSelector((state:RootState) => state.darkMode.value);
   return (
