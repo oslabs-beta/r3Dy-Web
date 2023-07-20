@@ -75,7 +75,7 @@ export default function SwitchDoc() {
       The <InlineCode> Callback </InlineCode> prop allows you to pass in a function that will be called when the switch is in its on position. You can pass in any type of function you like. When the switch is down or ‘on’ then the callback function will be run.  
     </Regular>
 
-    <CodeBlock codeString={'<Switch model={2} callback={() => {console.log(`hello`)}} /> <Switch model={2} callback={() => { counter++ }} />'}></CodeBlock>
+    <CodeBlock codeString={"<Switch model={2} callback={() => {console.log('hello')}} /> <Switch model={2} callback={() => { counter++ }} />"}></CodeBlock>
 
     <Callout> Note: Please be aware of scope, and where you variables are, before passing in a function to be run.  </Callout>
 
