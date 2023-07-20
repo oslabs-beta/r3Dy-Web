@@ -9,10 +9,10 @@ import Header from '../../../../../components/Header'
 import Callout from '../../../../../components/Callout'
 import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
+import { RootState } from '../../../../../src/app/store/store'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
-import { RootState } from '../../../store/store'
 
 const example: string = 
 `import { Canvas } from "@react-three/fiber";

@@ -10,6 +10,7 @@ import InlineCode from '../../../components/InlineCode'
 import BookIcon from 'public/book.svg'
 import BookIconWhite from 'public/book-white.svg'
 import { useSelector } from 'react-redux';
+import { RootState } from '../../../src/app/store/store'
 import Link from 'next/link'
 
 
@@ -27,7 +28,7 @@ import { Switch } from 'r3dy'
   </div>
 </div>`
 
-const darkModeState = useSelector((state:RootState) => state.darkMode.value);
+const darkModeState = useSelector((state: RootState) => state.darkMode.value);
 
   return ( 
     <>

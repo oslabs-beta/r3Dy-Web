@@ -12,10 +12,11 @@ import InlineCode from '../../../../components/InlineCode'
 import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
+import { RootState } from '../../../../src/app/store/store'
 
 
 export default function Install() {
-  const darkModeState = useSelector((state:RootState) => state.darkMode.value);
+  const darkModeState = useSelector((state: RootState) => state.darkMode.value);
   const implementationCode: string = `import { Canvas } from '@react-three/fiber'
 import { Switch } from 'r3dy'
   

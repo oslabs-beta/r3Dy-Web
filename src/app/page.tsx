@@ -7,6 +7,7 @@ import { Canvas } from '@react-three/fiber';
 import { MeshBasicMaterial, MeshStandardMaterial, MeshMatcapMaterial} from 'three';
 import { Loader, Switch, Slider, TextField, Button } from 'r3dy';
 import Footer from '../../components/Footer';
+import { RootState } from './store/store'
 export default function Home() {
     const [planeColor, setPlaneColor] = useState('#DDDFE1');
 
@@ -14,7 +15,7 @@ export default function Home() {
     navigator.clipboard.writeText('npm install r3dy');
   };
 
-  const darkModeState = useSelector((state) => state.darkMode.value); // current redux store state
+  const darkModeState = useSelector((state: RootState) => state.darkMode.value); // current redux store state
 
 
   useEffect(() => {
