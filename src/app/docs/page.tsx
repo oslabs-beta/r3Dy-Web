@@ -13,7 +13,7 @@ import BookIconWhite from 'public/book-white.svg'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../src/app/store/store'
 import Link from 'next/link'
-import Banner from 'public/r3dy-banner.png'
+import Banner from 'public/r3dy-banner.svg'
 
 
 export default function Overview() {
