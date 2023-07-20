@@ -79,7 +79,7 @@ const darkModeState = useSelector((state:RootState) => state.darkMode.value);
 
     <Header text={'Width & Height'}/>
     <Regular> 
-      The default <InlineCode>width</InlineCode> is set to <InlineCode>15</InlineCode> and the default height is set to <InlineCode>3</InlineCode>. Unlike <InlineCode>pixels(px)</InlineCode> on a screen. These number represents the size and dimensions of the rendered 3D component on the canvas.
+      The default <InlineCode>width</InlineCode> is set to <InlineCode>15</InlineCode> and the default height is set to <InlineCode>3</InlineCode>. Unlike the <InlineCode>pixels(px)</InlineCode> on a screen, these number represents the size and dimensions of the rendered 3D component on the canvas.
     </Regular>
     <Callout> Note: We do not recommend changing the <InlineCode>width</InlineCode> or <InlineCode>height</InlineCode>. The current dimensions are optimized to fill the canvas. The maximum height allowed is <InlineCode>5</InlineCode>. </Callout>
 
@@ -101,14 +101,14 @@ const darkModeState = useSelector((state:RootState) => state.darkMode.value);
     <Regular> 
       Alternative fonts can be provided to Text Field through the <InlineCode>font</InlineCode> prop. 
 
-      The default font used is <InlineCode>Inter-bold</InlineCode>. Unlike your typical text field, this 3D Text Field requires access to the font <InlineCode>.ttf</InlineCode> file. To properly change the font, it is recommended that you upload the .<InlineCode>.ttf</InlineCode>  font file into a <InlineCode>font</InlineCode>  directory on your project’s root and pass the path to the <InlineCode>font</InlineCode>  prop. (e.g. <InlineCode>font=”fonts/Inter-Bold.ttf”</InlineCode> ).
+      The default font is set to <InlineCode>Roboto</InlineCode>. Unlike your typical text field, this 3D Text Field requires access to the font <InlineCode>.ttf</InlineCode> file. To properly change the font, it is recommended that you upload the .<InlineCode>.ttf</InlineCode>  font file into a <InlineCode>font</InlineCode>  directory on your project’s root and pass the path to the <InlineCode>font</InlineCode>  prop. (e.g. <InlineCode>font=”fonts/Inter-Bold.ttf”</InlineCode> ).
     </Regular>
 
     <Header text={'Font Size'}/>
     <Regular> 
     The <InlineCode>fontSize</InlineCode> prop allows you to change the size of the 3D font on the Text Field. 
 
-    Similarly to the <InlineCode>height</InlineCode> and <InlineCode>width</InlineCode> props, the <InlineCode>fontSize</InlineCode> represents the size and dimensions of the rendered 3D text on the canvas. The default fontSize is set to `1`.
+    Similarly to the <InlineCode>height</InlineCode> and <InlineCode>width</InlineCode> props, the <InlineCode>fontSize</InlineCode> represents the size and dimensions of the rendered 3D text on the canvas. The default fontSize is set to <InlineCode>1</InlineCode>.
     </Regular>
 
     <Header text={'Code Sample'}/>
