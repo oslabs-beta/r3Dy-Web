@@ -50,7 +50,7 @@ import { Switch } from 'r3dy'
       </div>
     </div>
     <Regular> 
-    You want to make sure that you have imported the necessary dependencies. Import the desired component from <InlineCode> r3dy </InlineCode> as well as <InlineCode>Canvas</InlineCode> from from <InlineCode>@react-three/fiber.</InlineCode> Now that you've included dependencies, wrap your component in a <InlineCode>Canvas</InlineCode> tag. Make sure to include shadows in the <InlineCode>Canvas</InlineCode> tag or they will not show up.
+    You want to make sure that you have imported the necessary dependencies. Import the desired component from <InlineCode> r3dy </InlineCode> as well as <InlineCode>Canvas</InlineCode> from <InlineCode>@react-three/fiber.</InlineCode> Now that you've included dependencies, wrap your component in a <InlineCode>Canvas</InlineCode> tag. Make sure to include shadows in the <InlineCode>Canvas</InlineCode> tag or they will not show up.
        </Regular>
        <Callout> Note: As you can see, the <InlineCode> Canvas </InlineCode> is nested in 2 divs. The first div is meant to contain the <InlineCode> Canvas </InlineCode>. By nature <InlineCode> Canvas </InlineCode> will try to fill as much space as its allowed, so if you dont nest it in a div, and you have margins, it will constantly expand to fit those margins.
        The second div is used to adjust the placement of the first. As mentioned, <InlineCode> Canvas </InlineCode> took up the entire space of the first div. Now that its contained, you will need another to move it about the page. 
