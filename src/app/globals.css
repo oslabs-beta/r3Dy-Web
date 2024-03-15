@@ -92,7 +92,7 @@ line-height: normal;
     @apply bg-white flex align-middle content-center font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md ease-linear transition duration-150 hover:bg-[#E3E7FC] hover:text-indigo-700 dark:hover:text-[#9A81FF] dark:text-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700;
   }
   .nav-link-active {
-    @apply flex align-middle content-center font-medium text-sm mx-2 my-2 px-4 py-2 rounded-md ease-linear transition duration-150 bg-[#E3E7FC] text-indigo-700 dark:bg-slate-700 dark:text-[#9A81FF];
+    @apply flex align-middle content-center font-medium text-sm mx-2 my-2 md:my-0 px-4 py-2 rounded-md ease-linear transition duration-150 bg-[#E3E7FC] text-indigo-700 dark:bg-slate-700 dark:text-[#9A81FF];
   }
   .basic-transition {
     @apply ease-linear transition duration-150;
@@ -102,5 +102,20 @@ line-height: normal;
   }
   .darkmode-text {
     @apply text-[#9A81FF];
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
   }
 }

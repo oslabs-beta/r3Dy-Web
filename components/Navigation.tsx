@@ -45,7 +45,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className='md:px-8 z-20 fixed top-0 flex w-full align-middle py-2 px-4 justify-between border border-slate-200 bg-white dark:border-slate-700 bg-white dark:darkmode-background'>
+      <nav className='md:px-8 z-20 fixed top-0 flex w-full items-center py-2 px-4 justify-between border border-slate-200 bg-white dark:border-slate-700 bg-white dark:darkmode-background'>
 
         {/* LOGO */}
 
@@ -97,7 +97,7 @@ export default function Navigation() {
               <Image className="mr-4" width={24} height={24} src={darkModeState ? '/install-white.svg' : '/install.svg'} alt='install icon' />
               <p> Install </p>
             </Link >
-            <button onClick={() => setComponentDrop(!componentDrop)} className='nav-link bg-white flex align-middle font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md w-11/12'>
+            <button onClick={() => setComponentDrop(!componentDrop)} className='nav-link bg-white flex align-middle font-medium text-sm my-2 md:my-0 mx-2 px-4 py-2 rounded-md'>
               <Image className="mr-4" width={24} height={24} src={darkModeState ? '/box-white.svg' : '/box.svg'} alt='box icon' />
               <p className='w-full text-left'> Components </p>
               {componentDrop ? <Image className="mr-4 " width={24} height={24} src={darkModeState ? '/down-white.svg' : '/down.svg'} alt='arrow icon' /> : <Image className="mr-4 -rotate-90" width={24} height={24} src={darkModeState ? '/down-white.svg' : '/down.svg'} alt='arrow icon' />}

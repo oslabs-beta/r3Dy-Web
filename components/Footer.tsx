@@ -6,7 +6,7 @@ import FooterGithub from '../public/githubFooter.svg'
 
 export default function Footer() {
   return (
-    <section className='md:px-24 px-12 py-12 bg-[#0D1B2A] z-10'>
+    <section className='md:px-24 px-12 py-12 bg-[#0D1B2A] dark:bg-black z-10 bottom-0'>
         <div className='w-full md:flex md:items-start justify-between '>
             <Link href="/"> 
               <Image alt='Footer Logo' src={FooterLogo} width={186} height={37} className='md:mr-32 mb-8 md:mb-0'/>

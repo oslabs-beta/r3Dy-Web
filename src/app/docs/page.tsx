@@ -13,6 +13,7 @@ import BookIconWhite from 'public/book-white.svg'
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../src/app/store/store'
 import Link from 'next/link'
+import Banner from 'public/r3dy-banner.jpg'
 
 
 export default function Overview() {
@@ -35,7 +36,7 @@ const darkModeState = useSelector((state: RootState) => state.darkMode.value);
     <>
     <Title title='Overview' icon={darkModeState ? BookIconWhite : BookIcon} altTag='Overview Icon'/>
     <div className='flex justify-center pb-20 pt-10'>
-    <Image className='mt-16 md:mt-0' src='../r3dy-logo-ring.svg' width={232} height={232} alt='About Us Logo'/>
+    <Image className='max-w-2xl w-full rounded-3xl shadow-2xl shadow-black ' src={Banner} width={1240} height={620} alt='Overview Banner'/>
     </div>
     <Header text={'What is R3DY UI?'}/>
     <Regular>
