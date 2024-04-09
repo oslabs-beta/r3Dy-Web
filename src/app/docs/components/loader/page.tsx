@@ -78,17 +78,17 @@ export default function LoaderDoc() {
     <div className='flex flex-wrap justify-around align-center py-7'>
         <div className="w-64 h-64">
         <Canvas>
-            <Loader model={1} color='lightblue' scale={1.03}/>
+            <Loader model={1} color={darkModeState ? 'white' : 'grey'} scale={1.03}/>
         </Canvas>
         </div>
         <div className="w-64 h-64">
         <Canvas>
-          <Loader model={2} color='white' />
+          <Loader model={2} color={darkModeState ? 'white' : 'grey'} />
         </Canvas>
         </div>
         <div className="w-64 h-64">
         <Canvas>
-          <Loader model={3} color='lightblue' />
+          <Loader model={3} color={darkModeState ? 'white' : 'grey'} />
         </Canvas>
         </div>
       </div>
