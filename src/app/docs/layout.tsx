@@ -1,6 +1,17 @@
-'use client'
 import React from 'react'
 import DocsNavigation from '../../../components/DocsNavigation'
+
+
+
+export const metadata = {
+  title: 'R3DY UI',
+  description: 'Interactive 3D React Components',
+  appleWebApp: {
+    capable: true,
+    title: "R3DY UI",
+    statusBarStyle: "black-translucent",
+  },
+}
 
 
 export default function DocsLayout({
