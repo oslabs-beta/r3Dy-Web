@@ -27,7 +27,7 @@ export default function App() {
   );
 }`
 
-const Switch = dynamic(
+const Switch: any = dynamic(
   () => import('r3dy').then(mod => mod.Switch),
   { ssr: false }
 )

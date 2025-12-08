@@ -26,7 +26,7 @@ export default function App() {
   );
 }`
 
-const Slider = dynamic(
+const Slider: any = dynamic(
   () => import('r3dy').then(mod => mod.Slider),
   { ssr: false }
 )

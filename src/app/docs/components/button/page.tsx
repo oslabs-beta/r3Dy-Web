@@ -13,7 +13,7 @@ import InlineCode from '../../../../../components/InlineCode'
 
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store/store'
-const Button = dynamic(
+const Button: any = dynamic(
   () => import('r3dy').then(mod => mod.Button),
   { ssr: false }
 )

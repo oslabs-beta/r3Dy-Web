@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux';
 import { Canvas } from '@react-three/fiber'
 import { RootState } from '../../../store/store'
 
-const Loader = dynamic(
+const Loader: any = dynamic(
   () => import('r3dy').then(mod => mod.Loader),
   { ssr: false }
 )

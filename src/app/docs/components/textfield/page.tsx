@@ -14,7 +14,7 @@ import CodeBlock from '../../../../../components/CodeBlock'
 import InlineCode from '../../../../../components/InlineCode'
 import { RootState } from '../../../store/store'
 
-const TextField = dynamic(
+const TextField: any = dynamic(
   () => import('r3dy').then(mod => mod.TextField),
   { ssr: false }
 )

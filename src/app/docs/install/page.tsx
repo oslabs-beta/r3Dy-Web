@@ -14,7 +14,7 @@ import { Canvas } from '@react-three/fiber'
 import { RootState } from '../../../../src/app/store/store'
 import dynamic from 'next/dynamic'
 
-const Switch = dynamic(
+const Switch: any = dynamic(
   () => import('r3dy').then(mod => mod.Switch),
   { ssr: false }
 )

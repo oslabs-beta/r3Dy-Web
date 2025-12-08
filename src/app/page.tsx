@@ -10,7 +10,7 @@ import { MeshBasicMaterial, MeshStandardMaterial, MeshMatcapMaterial} from 'thre
 import Footer from '../../components/Footer';
 import { RootState } from './store/store'
 
-const Loader = dynamic(
+const Loader: any = dynamic(
   () => import('r3dy').then(mod => mod.Loader),
   { ssr: false }
 )
